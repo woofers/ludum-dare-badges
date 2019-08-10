@@ -1,0 +1,14 @@
+{
+  "restartable": "rs",
+  "verbose": true,
+  "execMap": {
+    "js": "babel src --out-dir dist --source-maps inline; node --harmony"
+  },
+  "watch": [
+    "src"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js,json"
+}
