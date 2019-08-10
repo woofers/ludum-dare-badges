@@ -1,0 +1,42 @@
+{
+  "name": "ludum-dare-badges",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "files": [
+    "dist",
+    "License.txt",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "NODE_ENV=production [ -d 'dist' ] && node dist/app.js || (echo 'You must run `yarn build` first' && exit 1)",
+    "build": "NODE_ENV=production babel src --out-dir dist",
+    "watch": " nodemon",
+    "dev": " nodemon",
+    "clean": "rimraf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woofers/ludum-dare-badges.git"
+  },
+  "bugs": {
+    "url": "https://github.com/woofers/ludum-dare-badges/issues"
+  },
+  "homepage": "https://github.com/woofers/ludum-dare-badges#readme",
+  "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "nodemon": "^1.19.1",
+    "rimraf": "^2.6.3"
+  }
+}
