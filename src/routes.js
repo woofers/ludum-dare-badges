@@ -1,9 +1,7 @@
-import fs from 'fs'
-import svg from './svg/large.svg'
+import large from './controllers/large'
 
 export default route => {
-  route.get('/', (req, res) => {
-    res.header("Content-Type", "image/svg+xml");
-    res.send(svg)
-  })
+  route.get('/', (req, res) => res.send('Read the docs ...'))
+  route.get('/:id/:game', large)
+  route.get('/large/:id/:game', large)
 }
