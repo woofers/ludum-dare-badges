@@ -10,10 +10,10 @@
     "README.md"
   ],
   "scripts": {
-    "start": "NODE_ENV=production [ -d 'dist' ] && node dist/app.js || (echo 'You must run `yarn build` first' && exit 1)",
-    "build": "NODE_ENV=production babel src --out-dir dist",
-    "watch": " nodemon",
-    "dev": " nodemon",
+    "start": "[ -d 'dist' ] && node dist/app.js || (echo 'You must run `yarn build` first' && exit 1)",
+    "build": "NODE_ENV=production webpack",
+    "watch": "NODE_ENV=development nodemon",
+    "dev": "NODE_ENV=development nodemon",
     "clean": "rimraf dist"
   },
   "repository": {
@@ -29,6 +29,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.4",
+    "dot": "^1.1.2",
     "express": "^4.17.1"
   },
   "devDependencies": {
@@ -36,7 +37,12 @@
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
     "nodemon": "^1.19.1",
-    "rimraf": "^2.6.3"
+    "raw-loader": "^3.1.0",
+    "rimraf": "^2.6.3",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-node-externals": "^1.7.2"
   }
 }
