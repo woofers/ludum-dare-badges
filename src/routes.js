@@ -1,7 +1,9 @@
+import fs from 'fs'
+import svg from './svg/large.svg'
 
 export default route => {
   route.get('/', (req, res) => {
-    res.send('Hello');
-    res.end()
+    res.header("Content-Type", "image/svg+xml");
+    res.send(svg)
   })
 }
