@@ -27,10 +27,10 @@
   <rect x="0" y="0" rx="12" ry="12" width="454" height="363" fill="#1f2429" />
 
   <!-- Title -->
-  <text x="25" y="112" font-size="24" fill="#d0d0d8" font-weight="bold">ALIEN, e x p a n s i o n .</text>
+  <text x="25" y="112" font-size="24" fill="#d0d0d8" font-weight="bold">{{=it.game}}</text>
 
   <!-- Logo -->
-  <a xlink:href="https://ldjam.com/events/ludum-dare/44/alien-e-x-p-a-n-s-i-o-n" target="_blank" rel="noopener noreferrer" xlink:title="View Ludum Dare Page">
+  <a xlink:href="{{=it.link}}" target="_blank" rel="noopener noreferrer" xlink:title="View Ludum Dare Page">
     <g transform="scale(0.5, 0.5) translate(17, 28)">
       <g transform="translate(24,30)" fill="#e53">
         <path d="M34.014 49.809c-2.43 0-4.86-1.956-4.86-5.866V1.758L0 1.89v45.728C0 69.238 16.284 80.1 32.569 80.1h25.083V49.809zM98.32 48.37c0 7.82-9.72 7.82-9.72 0V17.42H60.892v32.066c0 43.239 65.137 43.239 65.137 0V17.421H98.321V48.37zm69.42-46.48v13.56l-6 .19c-18.182.163-32.769 14.954-32.769 33.176 0 18.324 14.747 33.184 33.07 33.184 18.324 0 33.184-14.86 33.184-33.184V1.891h-27.484zm-6 41.245h6v5.681c0 3.129-2.458 5.7-5.698 5.7-3.129 0-5.586-2.571-5.586-5.7 0-3.026 2.302-5.522 5.285-5.681zm74.058 5.235c0 7.82-9.72 7.82-9.72 0V17.42h-27.709v32.066c0 43.239 65.138 43.239 65.138 0V17.421h-27.709V48.37zm93.665 0c0-6.927 8.715-6.816 8.715-.112v31.843h27.485V47.14c0-22.904-16.536-31.73-32.178-31.62-6.145.113-12.96 2.347-17.318 7.04-5.028-5.028-11.396-7.04-17.653-7.04-15.53 0-31.842 8.157-31.842 31.62V80.1h27.485V48.258c0-6.704 8.603-6.815 8.603.112V80.1h26.703V48.37z"></path>
@@ -56,37 +56,37 @@
 
   <!-- Categories -->
   <text x='61' y='126' font-size='16px' text-anchor='left' fill="#d0d0d8">
-    <tspan x='61' dy='1.63em'>Overall: </tspan>
-    <tspan x='61' dy='1.63em'>Fun: </tspan>
-    <tspan x='61' dy='1.63em'>Innovation: </tspan>
-    <tspan x='61' dy='1.63em'>Theme: </tspan>
-    <tspan x='61' dy='1.63em'>Graphics: </tspan>
-    <tspan x='61' dy='1.63em'>Audio: </tspan>
-    <tspan x='61' dy='1.63em'>Humor: </tspan>
-    <tspan x='61' dy='1.63em'>Mood: </tspan>
+    <tspan x='61' dy='1.63em'>{{=it.stats[0].category}}</tspan>
+    <tspan x='61' dy='1.63em'>{{=it.stats[1].category}}</tspan>
+    <tspan x='61' dy='1.63em'>{{=it.stats[2].category}}</tspan>
+    <tspan x='61' dy='1.63em'>{{=it.stats[3].category}}</tspan>
+    <tspan x='61' dy='1.63em'>{{=it.stats[4].category}}</tspan>
+    <tspan x='61' dy='1.63em'>{{=it.stats[5].category}}</tspan>
+    <tspan x='61' dy='1.63em'>{{=it.stats[6].category}}</tspan>
+    <tspan x='61' dy='1.63em'>{{=it.stats[7].category}}</tspan>
   </text>
 
   <!-- Placement -->
   <text x='153' y='126' font-size='16px' text-anchor='left' fill="#d0d0d8">
-    <tspan x='153' dy='1.63em'><tspan font-weight="bold">404</tspan><tspan font-size="12px" baseline-shift="super">th</tspan></tspan>
-    <tspan x='153' dy='1.63em'><tspan font-weight="bold">471</tspan><tspan font-size="12px" baseline-shift="super">st</tspan></tspan>
-    <tspan x='153' dy='1.63em'><tspan font-weight="bold">352</tspan><tspan font-size="12px" baseline-shift="super">th</tspan></tspan>
-    <tspan x='153' dy='1.63em'><tspan font-weight="bold">474</tspan><tspan font-size="12px" baseline-shift="super">th</tspan></tspan>
-    <tspan x='153' dy='1.63em'><tspan font-weight="bold">97</tspan><tspan font-size="12px" baseline-shift="super">th</tspan></tspan>
-    <tspan x='153' dy='1.63em'><tspan font-weight="bold">228</tspan><tspan font-size="12px" baseline-shift="super">th</tspan></tspan>
-    <tspan x='153' dy='1.63em'><tspan font-weight="bold">400</tspan><tspan font-size="12px" baseline-shift="super">th</tspan></tspan>
-    <tspan x='153' dy='1.63em'><tspan font-weight="bold">328</tspan><tspan font-size="12px" baseline-shift="super">th</tspan></tspan>
+    <tspan x='153' dy='1.63em'><tspan font-weight="bold">{{=it.stats[0].grade}}</tspan><tspan font-size="12px" baseline-shift="super">{{=it.stats[0].ith}}</tspan></tspan>
+    <tspan x='153' dy='1.63em'><tspan font-weight="bold">{{=it.stats[1].grade}}</tspan><tspan font-size="12px" baseline-shift="super">{{=it.stats[1].ith}}</tspan></tspan>
+    <tspan x='153' dy='1.63em'><tspan font-weight="bold">{{=it.stats[2].grade}}</tspan><tspan font-size="12px" baseline-shift="super">{{=it.stats[2].ith}}</tspan></tspan>
+    <tspan x='153' dy='1.63em'><tspan font-weight="bold">{{=it.stats[3].grade}}</tspan><tspan font-size="12px" baseline-shift="super">{{=it.stats[3].ith}}</tspan></tspan>
+    <tspan x='153' dy='1.63em'><tspan font-weight="bold">{{=it.stats[4].grade}}</tspan><tspan font-size="12px" baseline-shift="super">{{=it.stats[4].ith}}</tspan></tspan>
+    <tspan x='153' dy='1.63em'><tspan font-weight="bold">{{=it.stats[5].grade}}</tspan><tspan font-size="12px" baseline-shift="super">{{=it.stats[5].ith}}</tspan></tspan>
+    <tspan x='153' dy='1.63em'><tspan font-weight="bold">{{=it.stats[6].grade}}</tspan><tspan font-size="12px" baseline-shift="super">{{=it.stats[6].ith}}</tspan></tspan>
+    <tspan x='153' dy='1.63em'><tspan font-weight="bold">{{=it.stats[7].grade}}</tspan><tspan font-size="12px" baseline-shift="super">{{=it.stats[7].ith}}</tspan></tspan>
   </text>
 
   <!-- Ratings -->
   <text x='207' y='126' font-size='16px' text-anchor='left' fill="#d0d0d8">
-    <tspan x='207' dy='1.63em'>(2.97 average from 21 ratings)</tspan>
-    <tspan x='207' dy='1.63em'>(2.42 average from 21 ratings)</tspan>
-    <tspan x='207' dy='1.63em'>(2.82 average from 21 ratings)</tspan>
-    <tspan x='207' dy='1.63em'>(2.37 average from 21 ratings)</tspan>
-    <tspan x='207' dy='1.63em'>(3.85 average from 22 ratings)</tspan>
-    <tspan x='207' dy='1.63em'>(3.06 average from 20 ratings)</tspan>
-    <tspan x='207' dy='1.63em'>(1.79 average from 19 ratings)</tspan>
-    <tspan x='207' dy='1.63em'>(2.90 average from 21 ratings)</tspan>
+    <tspan x='207' dy='1.63em'>{{=it.stats[0].average}}</tspan>
+    <tspan x='207' dy='1.63em'>{{=it.stats[1].average}}</tspan>
+    <tspan x='207' dy='1.63em'>{{=it.stats[2].average}}</tspan>
+    <tspan x='207' dy='1.63em'>{{=it.stats[3].average}}</tspan>
+    <tspan x='207' dy='1.63em'>{{=it.stats[4].average}}</tspan>
+    <tspan x='207' dy='1.63em'>{{=it.stats[5].average}}</tspan>
+    <tspan x='207' dy='1.63em'>{{=it.stats[6].average}}</tspan>
+    <tspan x='207' dy='1.63em'>{{=it.stats[7].average}}</tspan>
   </text>
 </svg>
