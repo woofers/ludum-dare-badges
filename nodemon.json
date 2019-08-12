@@ -2,7 +2,7 @@
   "restartable": "rs",
   "verbose": true,
   "execMap": {
-    "js": "webpack; node --harmony"
+    "js": "node -r esm"
   },
   "watch": [
     "src"

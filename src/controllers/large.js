@@ -1,8 +1,5 @@
-import dot from 'dot'
-import { large } from '../svg'
+import { large as template } from '../svg'
 import { svgData } from '../api'
-
-const template = dot.template(large)
 
 export default (req, res) => {
   const { id, game } = req.params

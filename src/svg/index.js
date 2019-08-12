@@ -1,2 +1,2 @@
 
-export { default as large } from './large.jst'
+export { default as large } from './large'
