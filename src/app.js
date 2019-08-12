@@ -13,5 +13,5 @@ app.use(express.static('static'))
 routes(app)
 
 app.listen(env.PORT, () => {
-  console.log(`Server running on http://localhost:${env.PORT}`);
+  console.log(`Server running on ${env.HOST}:${env.PORT}`);
 })

@@ -1,1 +1,1 @@
-export default { PORT: 8080 }
+export default { HOST: 'http://localhost', PORT: 8080 }
