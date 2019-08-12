@@ -1,0 +1,6 @@
+version: '3'
+services:
+  ludum-dare-badges:
+    image: ludum-dare-badges
+    ports:
+    - "8080:8080"
