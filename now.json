@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "ludum-dare-badges",
+  "builds": [
+    { "src": "static/**/*", "use": "@now/static" },
+    { "src": "src/routes/*.js", "use": "@now/node" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "src/routes/index.js" },
+    { "src": "/favicon.ico", "dest": "static/favicon.ico" },
+    { "src": "/(.*)/(.*)/badge.svg", "dest": "src/routes/large.js?id=$1&game=$2" }
+  ]
+}
