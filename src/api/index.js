@@ -1,7 +1,12 @@
 import get from './get'
 import { ith, NA } from '../util/ith'
 import range from '../util/range'
+import { truncate, greaterThan } from '../util/truncate'
 import { average, category } from '../util/format'
+
+const MAX_NAME = 36
+const MAX_GRADE = 999
+const MAX_AVERAGE = 33
 
 const cats = 8
 const gradeKey = num => `grade-0${num}-result`
@@ -37,10 +42,11 @@ export const svgData = (id, game) => {
       const stats = data.stats.map(stat => ({
         ...stat,
         category: category(stat),
-        average: average(stat),
+        average: truncate(average(stat), MAX_AVERAGE),
+        grade: greaterThan(stat.grade, MAX_GRADE),
         ith: ith(stat.grade)
       }))
-      resolve({ ...data, stats })
+      resolve({ ...data, game: truncate(data.game, MAX_NAME), stats })
     }).catch(err => reject(err))
   })
 }
