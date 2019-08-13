@@ -19,11 +19,22 @@ const link = (id, game) => `https://ldjam.com/events/ludum-dare/${id}/${game}`
 
 export const getData = (id, game) => {
   return new Promise((resolve, reject) => {
+    if (isNaN(id)) {
+      return reject({
+        title: 'Invalid Ludum Dare #',
+        message: `/${id}/ is not a valid Ludum Dare Jam #`
+      })
+    }
     get(url(id, game)).then(body => {
       const amount = body.node[0].grade
       const ratings = body.node[0].magic
       const categories = body.node[1].meta
-      if (!categories || categories.length <= 0) return reject('Game not found')
+      if (!categories || categories.length <= 0) {
+        return reject({
+          title:'Game not found',
+          message:`${game} can not be found in for Jam #${id}`
+        })
+      }
       const stats = range(cats).map(i => ({
         index: i,
         category: categories[categoryKey(i)],
