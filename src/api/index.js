@@ -39,8 +39,8 @@ export const getData = (id, game) => {
         index: i,
         category: categories[categoryKey(i)],
         grade: ratings[gradeKey(i)] || NA,
-        average: ratings[averageKey(i)],
-        rating: amount[ratingsKey(i)]
+        average: ratings[averageKey(i)] || 0,
+        rating: amount[ratingsKey(i)] || 0
       }))
       return resolve({ game: body.node[0].name, stats, link: link(id, game) })
     })
