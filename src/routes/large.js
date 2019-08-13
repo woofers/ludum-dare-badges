@@ -1,19 +1,13 @@
 import { large as template } from '../svg'
 import { svgData } from '../api'
-
-const empty = value => {
-  if (!value) return false
-  return Object.keys(value).length > 0 ? value : false
-}
+import results from '../models/results'
 
 export default (req, res) => {
-  const { id, game } = empty(req.query) || empty(req.params)
-  if (isNaN(id)) {
-    res.send('Ludum Dare competition must be a valid integer (eg. `44/game-name`)')
-    return
-  }
-  svgData(id, game).then(data => {
-    res.setHeader("Content-Type", "image/svg+xml")
-    res.send(template(data))
-  }).catch(err => res.send(err))
+  const { id, game } = req.query
+  svgData(id, game)
+    .catch(err => Promise.resolve(results(err.title, '', err.message)))
+    .then(data => {
+      res.setHeader("Content-Type", "image/svg+xml")
+      res.send(template(data))
+    })
 }

@@ -30,6 +30,9 @@ export default it =>
   <!-- Title -->
   <text x="25" y="112" font-size="24" fill="#d0d0d8" font-weight="bold">${it.game}</text>
 
+  <!-- Error Message -->
+  <text x='25' y='140' font-size='16px' text-anchor='left' fill="#d0d0d8"><tspan>${it.error || ''}</tspan></text>
+
   <!-- Logo -->
   <a xlink:href="${it.link}" target="_blank" rel="noopener noreferrer" xlink:title="View Ludum Dare Page">
     <g transform="scale(0.5, 0.5) translate(17, 28)">
@@ -43,7 +46,7 @@ export default it =>
     </g>
   </a>
 
-  <!-- Icons -->
+  ${it.error ? '<!--' : ''}
   <g transform="translate(30, 138) scale(0.032, 0.032)" fill="#d0d0d8" >
     <use href="#overall" />
     <use href="#fun" y="775"/>
@@ -54,6 +57,7 @@ export default it =>
     <use href="#humor" y="4925"/>
     <use href="#mood" y="5750"/>
   </g>
+  ${it.error ? '-->' : ''}
 
   <!-- Categories -->
   <text x='61' y='126' font-size='16px' text-anchor='left' fill="#d0d0d8">
