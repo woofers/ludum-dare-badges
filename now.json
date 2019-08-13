@@ -9,6 +9,7 @@
     { "src": "/", "dest": "static/index.html" },
     { "src": "/favicon.ico", "dest": "static/favicon.ico" },
     { "src": "/(.*)/(.*)/badge.svg", "dest": "src/routes/large.js?id=$1&game=$2" },
+    { "src": "/(.*)/(.*)/badge.png", "dest": "src/routes/large.js?id=$1&game=$2&rasterize=true" },
     { "src": "/.*", "status": 404, "dest": "/static/404.html" }
   ]
 }
