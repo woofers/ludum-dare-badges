@@ -31,7 +31,7 @@ export default it =>
   <text x="25" y="112" font-size="24" fill="#d0d0d8" font-weight="bold">${it.game}</text>
 
   <!-- Error Message -->
-  <text x='25' y='140' font-size='16px' font-weight="300" fill="#d0d0d8"><tspan>${it.error || ''}</tspan></text>
+  <text transform="scale(0.85, 1); translate(6, 0)" x='25' y='140' font-size='16px' font-weight="300" fill="#d0d0d8"><tspan>${it.error || ''}</tspan></text>
 
   <!-- Logo -->
   <a xlink:href="${it.link}" target="_blank" rel="noopener noreferrer" xlink:title="View Ludum Dare Page">
@@ -60,7 +60,7 @@ export default it =>
   ${it.error ? '-->' : ''}
 
   <!-- Categories -->
-  <text x='61' y='126' font-size='16px' fill="#d0d0d8">
+  <text transform="scale(0.85, 1); translate(10, 0)" x='61' y='126' font-size='16px' fill="#d0d0d8">
     <tspan font-weight="300" x='61' dy='1.63em'>${it.stats[0].category}</tspan>
     <tspan font-weight="300" x='61' dy='1.63em'>${it.stats[1].category}</tspan>
     <tspan font-weight="300" x='61' dy='1.63em'>${it.stats[2].category}</tspan>
@@ -92,7 +92,7 @@ export default it =>
   </text>
 
   <!-- Ratings -->
-  <text x='207' y='126' font-size='16px' fill="#d0d0d8">
+  <text transform="scale(0.85, 1); translate(50, 0)" x='207' y='126' font-size='16px' fill="#d0d0d8">
     <tspan font-weight="300" x='207' dy='1.63em'>${it.stats[0].average}</tspan>
     <tspan font-weight="300" x='207' dy='1.63em'>${it.stats[1].average}</tspan>
     <tspan font-weight="300" x='207' dy='1.63em'>${it.stats[2].average}</tspan>
