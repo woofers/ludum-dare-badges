@@ -4,7 +4,7 @@ export default it =>
   <defs>
     <!-- Fonts -->
     <style type="text/css">
-      @import url('https://fonts.googleapis.com/css?family=Raleway:600,600italic,800,800italic|Roboto:300,300italic,700,700italic');
+      @import url("https://fonts.googleapis.com/css?family=Raleway:600,600italic,800,800italic|Roboto:300,300italic,700,700italic");
       svg > text {
         font-family: Raleway, "Helvetica Neue", Roboto, "Arial Nova", "Segoe UI", "Ubuntu Light", sans-serif;
       }
@@ -31,7 +31,7 @@ export default it =>
   <text x="25" y="112" font-size="24" fill="#d0d0d8" font-weight="bold">${it.game}</text>
 
   <!-- Error Message -->
-  <text transform="scale(0.85, 1); translate(6, 0)" x='25' y='140' font-size='16px' font-weight="300" fill="#d0d0d8"><tspan>${it.error || ''}</tspan></text>
+  <text transform="scale(0.85, 1); translate(6, 0)" x="25" y="140" font-size="16px" font-weight="300" fill="#d0d0d8"><tspan>${it.error || ""}</tspan></text>
 
   <!-- Logo -->
   <a xlink:href="${it.link}" target="_blank" rel="noopener noreferrer" xlink:title="View Ludum Dare Page">
@@ -60,47 +60,47 @@ export default it =>
   ${it.error ? '-->' : ''}
 
   <!-- Categories -->
-  <text transform="scale(0.85, 1); translate(10, 0)" x='61' y='126' font-size='16px' fill="#d0d0d8">
-    <tspan font-weight="300" x='61' dy='1.63em'>${it.stats[0].category}</tspan>
-    <tspan font-weight="300" x='61' dy='1.63em'>${it.stats[1].category}</tspan>
-    <tspan font-weight="300" x='61' dy='1.63em'>${it.stats[2].category}</tspan>
-    <tspan font-weight="300" x='61' dy='1.63em'>${it.stats[3].category}</tspan>
-    <tspan font-weight="300" x='61' dy='1.63em'>${it.stats[4].category}</tspan>
-    <tspan font-weight="300" x='61' dy='1.63em'>${it.stats[5].category}</tspan>
-    <tspan font-weight="300" x='61' dy='1.63em'>${it.stats[6].category}</tspan>
-    <tspan font-weight="300" x='61' dy='1.63em'>${it.stats[7].category}</tspan>
+  <text transform="scale(0.85, 1); translate(10, 0)" x="61" y="126" font-size="16px" fill="#d0d0d8">
+    <tspan font-weight="300" x="61" dy="1.63em">${it.stats[0].category}</tspan>
+    <tspan font-weight="300" x="61" dy="1.63em">${it.stats[1].category}</tspan>
+    <tspan font-weight="300" x="61" dy="1.63em">${it.stats[2].category}</tspan>
+    <tspan font-weight="300" x="61" dy="1.63em">${it.stats[3].category}</tspan>
+    <tspan font-weight="300" x="61" dy="1.63em">${it.stats[4].category}</tspan>
+    <tspan font-weight="300" x="61" dy="1.63em">${it.stats[5].category}</tspan>
+    <tspan font-weight="300" x="61" dy="1.63em">${it.stats[6].category}</tspan>
+    <tspan font-weight="300" x="61" dy="1.63em">${it.stats[7].category}</tspan>
   </text>
 
   <!-- Placement -->
-  <text x='153' y='126' font-size='16px' fill="#d0d0d8">
-    <tspan x='153' dy='1.63em' font-weight="bold">${it.stats[0].grade}</tspan>
-    <tspan dx='-0.3em' dy='-0.6em' font-weight="300" font-size="12px">${it.stats[0].ith}</tspan>
-    <tspan x='153' dy='2.08em' font-weight="bold">${it.stats[1].grade}</tspan>
-    <tspan dx='-0.3em' dy='-0.6em' font-weight="300" font-size="12px">${it.stats[1].ith}</tspan>
-    <tspan x='153' dy='2.08em' font-weight="bold">${it.stats[2].grade}</tspan>
-    <tspan dx='-0.3em' dy='-0.6em' font-weight="300" font-size="12px">${it.stats[2].ith}</tspan>
-    <tspan x='153' dy='2.08em' font-weight="bold">${it.stats[3].grade}</tspan>
-    <tspan dx='-0.3em' dy='-0.6em' font-weight="300" font-size="12px">${it.stats[3].ith}</tspan>
-    <tspan x='153' dy='2.08em' font-weight="bold">${it.stats[4].grade}</tspan>
-    <tspan dx='-0.3em' dy='-0.6em' font-weight="300" font-size="12px">${it.stats[4].ith}</tspan>
-    <tspan x='153' dy='2.08em' font-weight="bold">${it.stats[5].grade}</tspan>
-    <tspan dx='-0.3em' dy='-0.6em' font-weight="300" font-size="12px">${it.stats[5].ith}</tspan>
-    <tspan x='153' dy='2.08em' font-weight="bold">${it.stats[6].grade}</tspan>
-    <tspan dx='-0.3em' dy='-0.6em' font-weight="300" font-size="12px">${it.stats[6].ith}</tspan>
-    <tspan x='153' dy='2.08em' font-weight="bold">${it.stats[7].grade}</tspan>
-    <tspan dx='-0.3em' dy='-0.6em' font-weight="300" font-size="12px">${it.stats[7].ith}</tspan>
+  <text x="153" y="126" font-size="16px" fill="#d0d0d8">
+    <tspan x="153" dy="1.63em" font-weight="bold">${it.stats[0].grade}</tspan>
+    <tspan dx="-0.3em" dy="-0.6em" font-weight="300" font-size="12px">${it.stats[0].ith}</tspan>
+    <tspan x="153" dy="2.08em" font-weight="bold">${it.stats[1].grade}</tspan>
+    <tspan dx="-0.3em" dy="-0.6em" font-weight="300" font-size="12px">${it.stats[1].ith}</tspan>
+    <tspan x="153" dy="2.08em" font-weight="bold">${it.stats[2].grade}</tspan>
+    <tspan dx="-0.3em" dy="-0.6em" font-weight="300" font-size="12px">${it.stats[2].ith}</tspan>
+    <tspan x="153" dy="2.08em" font-weight="bold">${it.stats[3].grade}</tspan>
+    <tspan dx="-0.3em" dy="-0.6em" font-weight="300" font-size="12px">${it.stats[3].ith}</tspan>
+    <tspan x="153" dy="2.08em" font-weight="bold">${it.stats[4].grade}</tspan>
+    <tspan dx="-0.3em" dy="-0.6em" font-weight="300" font-size="12px">${it.stats[4].ith}</tspan>
+    <tspan x="153" dy="2.08em" font-weight="bold">${it.stats[5].grade}</tspan>
+    <tspan dx="-0.3em" dy="-0.6em" font-weight="300" font-size="12px">${it.stats[5].ith}</tspan>
+    <tspan x="153" dy="2.08em" font-weight="bold">${it.stats[6].grade}</tspan>
+    <tspan dx="-0.3em" dy="-0.6em" font-weight="300" font-size="12px">${it.stats[6].ith}</tspan>
+    <tspan x="153" dy="2.08em" font-weight="bold">${it.stats[7].grade}</tspan>
+    <tspan dx="-0.3em" dy="-0.6em" font-weight="300" font-size="12px">${it.stats[7].ith}</tspan>
   </text>
 
   <!-- Ratings -->
-  <text transform="scale(0.85, 1); translate(50, 0)" x='207' y='126' font-size='16px' fill="#d0d0d8">
-    <tspan font-weight="300" x='207' dy='1.63em'>${it.stats[0].average}</tspan>
-    <tspan font-weight="300" x='207' dy='1.63em'>${it.stats[1].average}</tspan>
-    <tspan font-weight="300" x='207' dy='1.63em'>${it.stats[2].average}</tspan>
-    <tspan font-weight="300" x='207' dy='1.63em'>${it.stats[3].average}</tspan>
-    <tspan font-weight="300" x='207' dy='1.63em'>${it.stats[4].average}</tspan>
-    <tspan font-weight="300" x='207' dy='1.63em'>${it.stats[5].average}</tspan>
-    <tspan font-weight="300" x='207' dy='1.63em'>${it.stats[6].average}</tspan>
-    <tspan font-weight="300" x='207' dy='1.63em'>${it.stats[7].average}</tspan>
+  <text transform="scale(0.85, 1); translate(50, 0)" x="207" y="126" font-size="16px" fill="#d0d0d8">
+    <tspan font-weight="300" x="207" dy="1.63em">${it.stats[0].average}</tspan>
+    <tspan font-weight="300" x="207" dy="1.63em">${it.stats[1].average}</tspan>
+    <tspan font-weight="300" x="207" dy="1.63em">${it.stats[2].average}</tspan>
+    <tspan font-weight="300" x="207" dy="1.63em">${it.stats[3].average}</tspan>
+    <tspan font-weight="300" x="207" dy="1.63em">${it.stats[4].average}</tspan>
+    <tspan font-weight="300" x="207" dy="1.63em">${it.stats[5].average}</tspan>
+    <tspan font-weight="300" x="207" dy="1.63em">${it.stats[6].average}</tspan>
+    <tspan font-weight="300" x="207" dy="1.63em">${it.stats[7].average}</tspan>
   </text>
 </svg>
 `
