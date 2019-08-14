@@ -73,14 +73,22 @@ export default it =>
 
   <!-- Placement -->
   <text x='153' y='126' font-size='16px' fill="#d0d0d8">
-    <tspan x='153' dy='1.63em'><tspan font-weight="bold">${it.stats[0].grade}</tspan><tspan font-weight="300" font-size="12px" baseline-shift="super">${it.stats[0].ith}</tspan></tspan>
-    <tspan x='153' dy='1.63em'><tspan font-weight="bold">${it.stats[1].grade}</tspan><tspan font-weight="300" font-size="12px" baseline-shift="super">${it.stats[1].ith}</tspan></tspan>
-    <tspan x='153' dy='1.63em'><tspan font-weight="bold">${it.stats[2].grade}</tspan><tspan font-weight="300" font-size="12px" baseline-shift="super">${it.stats[2].ith}</tspan></tspan>
-    <tspan x='153' dy='1.63em'><tspan font-weight="bold">${it.stats[3].grade}</tspan><tspan font-weight="300" font-size="12px" baseline-shift="super">${it.stats[3].ith}</tspan></tspan>
-    <tspan x='153' dy='1.63em'><tspan font-weight="bold">${it.stats[4].grade}</tspan><tspan font-weight="300" font-size="12px" baseline-shift="super">${it.stats[4].ith}</tspan></tspan>
-    <tspan x='153' dy='1.63em'><tspan font-weight="bold">${it.stats[5].grade}</tspan><tspan font-weight="300" font-size="12px" baseline-shift="super">${it.stats[5].ith}</tspan></tspan>
-    <tspan x='153' dy='1.63em'><tspan font-weight="bold">${it.stats[6].grade}</tspan><tspan font-weight="300" font-size="12px" baseline-shift="super">${it.stats[6].ith}</tspan></tspan>
-    <tspan x='153' dy='1.63em'><tspan font-weight="bold">${it.stats[7].grade}</tspan><tspan font-weight="300" font-size="12px" baseline-shift="super">${it.stats[7].ith}</tspan></tspan>
+    <tspan x='153' dy='1.63em' font-weight="bold">${it.stats[0].grade}</tspan>
+    <tspan dx='-0.3em' dy='-0.6em' font-weight="300" font-size="12px">${it.stats[0].ith}</tspan>
+    <tspan x='153' dy='2.08em' font-weight="bold">${it.stats[1].grade}</tspan>
+    <tspan dx='-0.3em' dy='-0.6em' font-weight="300" font-size="12px">${it.stats[1].ith}</tspan>
+    <tspan x='153' dy='2.08em' font-weight="bold">${it.stats[2].grade}</tspan>
+    <tspan dx='-0.3em' dy='-0.6em' font-weight="300" font-size="12px">${it.stats[2].ith}</tspan>
+    <tspan x='153' dy='2.08em' font-weight="bold">${it.stats[3].grade}</tspan>
+    <tspan dx='-0.3em' dy='-0.6em' font-weight="300" font-size="12px">${it.stats[3].ith}</tspan>
+    <tspan x='153' dy='2.08em' font-weight="bold">${it.stats[4].grade}</tspan>
+    <tspan dx='-0.3em' dy='-0.6em' font-weight="300" font-size="12px">${it.stats[4].ith}</tspan>
+    <tspan x='153' dy='2.08em' font-weight="bold">${it.stats[5].grade}</tspan>
+    <tspan dx='-0.3em' dy='-0.6em' font-weight="300" font-size="12px">${it.stats[5].ith}</tspan>
+    <tspan x='153' dy='2.08em' font-weight="bold">${it.stats[6].grade}</tspan>
+    <tspan dx='-0.3em' dy='-0.6em' font-weight="300" font-size="12px">${it.stats[6].ith}</tspan>
+    <tspan x='153' dy='2.08em' font-weight="bold">${it.stats[7].grade}</tspan>
+    <tspan dx='-0.3em' dy='-0.6em' font-weight="300" font-size="12px">${it.stats[7].ith}</tspan>
   </text>
 
   <!-- Ratings -->
