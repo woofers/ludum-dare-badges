@@ -2,15 +2,14 @@
   "version": 2,
   "name": "ludum-dare-badges",
   "builds": [
-    { "src": "static/**/*", "use": "@now/static" },
+    { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "demo/public" } },
     { "src": "src/routes/*.js", "use": "@now/node" }
   ],
   "routes": [
-    { "src": "/", "dest": "static/index.html" },
-    { "src": "/favicon.ico", "dest": "static/favicon.ico" },
     { "src": "/(.*)/(.*)/badge.svg", "dest": "src/routes/large.js?id=$1&game=$2" },
     { "src": "/(.*)/(.*)/badge.png", "dest": "src/routes/large.js?id=$1&game=$2&rasterize=true" },
-    { "src": "/.*", "status": 404, "dest": "/static/404.html" }
+    { "handle": "filesystem" },
+    { "src": "/.*", "status": 404, "dest": "404" }
   ],
   "github": {
     "silent": true
