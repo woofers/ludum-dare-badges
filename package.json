@@ -10,7 +10,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "NODE_ENV=production yarn --cwd demo build",
+    "build": "NODE_ENV=production yarn --cwd packages/ludum-dare-badges-demo build",
     "watch": "NODE_ENV=development now dev",
     "dev": "NODE_ENV=development now dev"
   },

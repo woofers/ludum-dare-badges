@@ -2,7 +2,7 @@
   "version": 2,
   "name": "ludum-dare-badges",
   "builds": [
-    { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "demo/public" } },
+    { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "packages/ludum-dare-badges-demo/public" } },
     { "src": "src/routes/*.js", "use": "@now/node" }
   ],
   "routes": [
