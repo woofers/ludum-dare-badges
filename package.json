@@ -2,13 +2,6 @@
   "name": "ludum-dare-badges",
   "version": "1.0.0",
   "description": "SVG & PNG badges for Ludum Dare Game Jam results",
-  "main": "src/app.js",
-  "files": [
-    "src",
-    "License.txt",
-    "package.json",
-    "README.md"
-  ],
   "scripts": {
     "build:api": "yarn --cwd packages/ludum-dare-badges-api install",
     "build:demo": "yarn --cwd packages/ludum-dare-badges-demo install && yarn --cwd packages/ludum-dare-badges-demo build",
