@@ -38,7 +38,7 @@ export const getData = (id, game) => {
       if (!categories || categories.length <= 0) {
         return reject({
           title:'Game not found',
-          message:`${game} can not be found in for Jam #${id}`
+          message:`${game} can not be found for Jam #${id}`
         })
       }
       const stats = range(cats).map(i => ({
