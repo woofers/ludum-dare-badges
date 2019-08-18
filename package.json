@@ -1,16 +1,11 @@
 {
   "name": "ludum-dare-badges",
   "version": "1.0.0",
-  "description": "",
-  "main": "src/app.js",
-  "files": [
-    "src",
-    "License.txt",
-    "package.json",
-    "README.md"
-  ],
+  "description": "SVG & PNG badges for Ludum Dare Game Jam results",
   "scripts": {
-    "build": "NODE_ENV=production yarn --cwd demo build",
+    "build:api": "yarn --cwd packages/ludum-dare-badges-api install",
+    "build:demo": "yarn --cwd packages/ludum-dare-badges-demo install && yarn --cwd packages/ludum-dare-badges-demo build",
+    "build": "NODE_ENV=production yarn build:api && yarn build:demo",
     "watch": "NODE_ENV=development now dev",
     "dev": "NODE_ENV=development now dev"
   },
@@ -23,10 +18,5 @@
   },
   "homepage": "https://github.com/woofers/ludum-dare-badges#readme",
   "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "axios": "^0.19.0",
-    "svg2img": "^0.6.1"
-  },
-  "devDependencies": {}
+  "license": "MIT"
 }
