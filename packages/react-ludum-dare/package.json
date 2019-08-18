@@ -1,0 +1,55 @@
+{
+  "name": "react-ludum-dare",
+  "version": "2.0.0",
+  "description": "Display Ludum Dare Game Jam results in React",
+  "main": "lib/react-ludum-dare.js",
+  "src": "src/ludum-dare.js",
+  "files": [
+    "lib",
+    "License.txt",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "yarn watch",
+    "build": "NODE_ENV=production webpack",
+    "watch": "NODE_ENV=development webpack --watch",
+    "clean": "rimraf lib",
+    "test": "echo \"No tests \""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woofers/ludum-dare-badges.git"
+  },
+  "bugs": {
+    "url": "https://github.com/woofers/ludum-dare-badges/issues"
+  },
+  "homepage": "https://github.com/woofers/ludum-dare-badges#readme",
+  "keywords": [
+    "react",
+    "reactjs",
+    "component"
+  ],
+  "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^0.13.0 || ^0.14.0 || ^15.0.0 || ^16.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.1.0",
+    "eslint-loader": "^2.2.1",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "peer-deps-externals-webpack-plugin": "^1.0.4",
+    "rimraf": "^3.0.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.5",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {}
+}
