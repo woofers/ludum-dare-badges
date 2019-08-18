@@ -19,7 +19,13 @@ const link = (id, game) => `https://ldjam.com/events/ludum-dare/${id}/${game}`
 
 export const getData = (id, game) => {
   return new Promise((resolve, reject) => {
-    if (isNaN(id)) {
+    if (!id && !game) {
+      return reject({
+        title: 'Enter a Game',
+        message: `Enter a Ludum Dare game`
+      })
+    }
+    else if (isNaN(id)) {
       return reject({
         title: 'Invalid Ludum Dare #',
         message: `/${id}/ is not a valid Ludum Dare Jam #`
@@ -32,7 +38,7 @@ export const getData = (id, game) => {
       if (!categories || categories.length <= 0) {
         return reject({
           title:'Game not found',
-          message:`${game} can not be found in for Jam #${id}`
+          message:`${game} can not be found for Jam #${id}`
         })
       }
       const stats = range(cats).map(i => ({
