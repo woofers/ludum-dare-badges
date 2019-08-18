@@ -1,7 +1,7 @@
 {
   "name": "ludum-dare-badges-demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "SVG & PNG badges for Ludum Dare Game Jam results",
   "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",
   "dependencies": {
     "@emotion/core": "^10.0.16",

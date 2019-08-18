@@ -1,7 +1,7 @@
 {
   "name": "ludum-dare-badges-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "SVG & PNG badges for Ludum Dare Game Jam results",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/woofers/ludum-dare-badges.git"

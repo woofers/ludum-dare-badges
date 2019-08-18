@@ -1,7 +1,7 @@
 {
   "name": "react-ludum-dare",
   "version": "2.0.0",
-  "description": "Display Ludum Dare Game Jam results in React",
+  "description": "React bindings for ludum-dare-badges",
   "main": "lib/react-ludum-dare.js",
   "src": "src/ludum-dare.js",
   "files": [
