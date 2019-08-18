@@ -23,8 +23,8 @@ module.exports = {
         name,
         short_name: name,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#3d4752`,
+        theme_color: `#ffa500`,
         display: `minimal-ui`,
         icon: `static/favicon.ico`,
       }
