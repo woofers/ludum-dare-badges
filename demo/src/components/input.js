@@ -45,18 +45,15 @@ const Input = p => {
   const width = css`
     max-width: ${p.width};
   `
-  const { only, set, ...rest } = p
+  const { type, set, ...rest } = p
   const ref = useRef()
   const setValue = value => ref.current.value = value
-  const removeNumber = event => {
+  const removeAlpha = event => {
     const { value } = event.target
-    const max = value.length - 1
-    const last = value.charAt(max)
-    if (!isNaN(last)) return
-    setValue(value.substring(0, max))
+    setValue(value.replace(/[^0-9.]+/g, ''))
   }
   const handleChange = event => {
-    if (only === 'number') removeNumber(event)
+    if (type === 'number') removeAlpha(event)
     p.onChange(event)
     set(event.target.value)
   }

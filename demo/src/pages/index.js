@@ -20,7 +20,7 @@ const IndexPage = () => {
       <h3>SVG badges for Ludum Dare Game Jam results</h3>
       <Form>
         <Input width="200px" disabled label="badges.vandoorn.ca/" />
-        <Input width="145px" label="Ludum Dare #" placeholder="44" only="number" set={setId} />
+        <Input width="145px" label="Ludum Dare #" placeholder="44" type="number" set={setId} />
         <Input width="35px" disabled label="/" />
         <Input width="205px" label="Game" placeholder="alien-e-x-p-a-n-s-i-o-n" set={setGame} />
         <Input width="90px" disabled label="/badge." />
