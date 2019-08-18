@@ -8,8 +8,9 @@ import Widget from '../components/widget'
 
 const IndexPage = () => {
   const [id, setId] = useState('')
-  const [game, setGame] = useState('')
+  const [name, setName] = useState('')
   const [type, setType] = useState('svg')
+  const game = id && name ? `${id}/${name}`: ''
   return (
     <Layout>
       <Helmet
@@ -22,11 +23,11 @@ const IndexPage = () => {
         <Input width="200px" disabled label="badges.vandoorn.ca/" />
         <Input width="145px" label="Ludum Dare #" placeholder="44" type="number" set={setId} />
         <Input width="35px" disabled label="/" />
-        <Input width="205px" label="Game" placeholder="alien-e-x-p-a-n-s-i-o-n" set={setGame} />
+        <Input width="205px" label="Game" placeholder="alien-e-x-p-a-n-s-i-o-n" set={setName} />
         <Input width="90px" disabled label="/badge." />
         <Select options={['svg', 'png']} set={setType} value={type} />
       </Form>
-      { id && game ? <Widget game={`${id}/${game}`} type={type} /> : null }
+      <Widget game={game} type={type} />
     </Layout>
   )
 }
