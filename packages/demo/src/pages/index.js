@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import Input from '../components/input'
 import Form from '../components/form'
 import Select from '../components/select'
-import Widget from 'react-ludum-dare'
+import Widget from '@ludum-dare-badges/react'
 import { css } from '@emotion/core'
 
 const hide = css`
