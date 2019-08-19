@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "SVG & PNG badges for Ludum Dare Game Jam results",
   "scripts": {
-    "build:api": "yarn --cwd packages/ludum-dare-badges-api install",
-    "build:react": "yarn --cwd packages/react-ludum-dare install && yarn --cwd packages/react-ludum-dare build",
-    "build:demo": "yarn --cwd packages/ludum-dare-badges-demo install && yarn --cwd packages/ludum-dare-badges-demo build",
+    "build:api": "yarn --cwd packages/api install",
+    "build:react": "yarn --cwd packages/react install && yarn --cwd packages/react build",
+    "build:demo": "yarn --cwd packages/demo install && yarn --cwd packages/demo build",
     "build": "NODE_ENV=production yarn build:api && yarn build:react && yarn build:demo",
     "watch": "NODE_ENV=development now dev",
     "dev": "NODE_ENV=development now dev"
