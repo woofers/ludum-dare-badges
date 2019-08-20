@@ -1,6 +1,6 @@
 
 
-# @ludum-dare-badges
+# @ludum-dare-badges/api
 
 [![img](https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/badge/woofers/ludum-dare-badges)](https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/results/woofers/react-ludum-dare)
 
@@ -9,15 +9,6 @@ API used to dynamically generate SVG and PNG Ludum Dare results badges in real-t
 **[Live Demo](https://badges.vandoorn.ca)**
 
 **Note:** This project is community made and not endorsed by the offical Ludum Dare creator(s).
-
-
-# Packages
-
-This monorepo is split up into the following packages:
-
--   **[@ludum-dare-badges/api](https://github.com/woofers/ludum-dare-badges/tree/master/packages/api)** - Serveless API used to generate SVG & PNG badges
--   **[@ludum-dare-badges/demo](https://github.com/woofers/ludum-dare-badges/tree/master/packages/demo)** - Demo site used to showcase how to build a API query for a badge
--   **[@ludum-dare-badges/react](https://github.com/woofers/ludum-dare-badges/tree/master/packages/react)** - React wrapper component which forms and calls the API based off passed props.
 
 
 # Examples
@@ -46,7 +37,7 @@ the path would be `44/alien-e-x-p-a-n-s-i-o-n/badge.svg`
 
 You can also think of it as adding `/badge.svg` to the existing Ludum Dare path:
 
-![img](./packages/api/screenshots/url.png "URL Path")
+![img](./screenshots/url.png "URL Path")
 
 
 ## Hosted

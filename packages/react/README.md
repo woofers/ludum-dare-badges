@@ -1,5 +1,4 @@
-@ludum-dare-badges/react
-===========
+# @ludum-dare-badges/react
 
 [![img](https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/badge/woofers/ludum-dare-badges)](https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/results/woofers/react-ludum-dare) [![img](https://david-dm.org/woofers/@ludum-dare-badges/react.svg)](https://www.npmjs.com/package/@ludum-dare-badges/react) [![img](https://badge.fury.io/js/@ludum-dare-badges/react.svg)](https://www.npmjs.com/package/@ludum-dare-badges/react) [![img](https://img.shields.io/npm/dt/@ludum-dare-badges/react.svg)](https://www.npmjs.com/package/@ludum-dare-badges/react) [![img](https://img.shields.io/npm/l/@ludum-dare-badges/react.svg)](https://github.com/woofers/ludum-dare-badges/blob/master/License.txt)
 
@@ -27,10 +26,15 @@ Display Ludum Dare Game Jam results in React.
 import React from 'react'
 import Widget from '@ludum-dare-badges/react'
 
-const App = () => <Widget game="44/alien-e-x-p-a-n-s-i-o-n" />
+const App = () => (
+  <Widget game="44/alien-e-x-p-a-n-s-i-o-n" />
+)
 ```
 
 Simply add the game widget to the React application using JSX.
+
+The React component will simply call [@ludum-dare-badges/api](https://github.com/woofers/ludum-dare-badges/tree/master/packages/api)
+to obtain the results badge.
 
 
 ## Props
