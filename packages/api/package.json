@@ -14,7 +14,7 @@
   "bugs": {
     "url": "https://github.com/woofers/ludum-dare-badges/issues"
   },
-  "homepage": "https://github.com/woofers/ludum-dare-badges#readme",
+  "homepage": "https://github.com/woofers/ludum-dare-badges/tree/master/packages/api#readme",
   "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",
   "license": "MIT",
   "dependencies": {
