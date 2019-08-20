@@ -31,6 +31,14 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "clean": "rimraf public"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woofers/ludum-dare-badges.git"
+  },
+  "bugs": {
+    "url": "https://github.com/woofers/ludum-dare-badges/issues"
+  },
+  "homepage": "https://github.com/woofers/ludum-dare-badges/tree/master/packages/demo#readme",
   "devDependencies": {
     "rimraf": "^3.0.0"
   }
