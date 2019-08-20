@@ -80,5 +80,5 @@ To form the API query follow the steps above with and replace the domain
 with the domain of your self hosted instance:
 
 #+BEGIN_SRC
-<mydomain.com>/:id/:game/badge.<type>
+<example.com>/:id/:game/badge.<type>
 #+END_SRC

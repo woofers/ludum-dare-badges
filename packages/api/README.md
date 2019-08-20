@@ -70,4 +70,4 @@ and type `now deploy` in the root of the monorepo.
 To form the API query follow the steps above with and replace the domain
 with the domain of your self hosted instance:
 
-    <mydomain.com>/:id/:game/badge.<type>
+    <example.com>/:id/:game/badge.<type>
