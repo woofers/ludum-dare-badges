@@ -6,7 +6,7 @@
 
 * @ludum-dare-badges
 
-[[https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/results/woofers/react-ludum-dare][https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/badge/woofers/ludum-dare-badges]]
+[[https://github.com/woofers/ludum-dare-badges/actions][https://github.com/woofers/ludum-dare-badges/workflows/build/badge.svg]]
 
 API used to dynamically generate SVG and PNG Ludum Dare results badges in real-time.
 

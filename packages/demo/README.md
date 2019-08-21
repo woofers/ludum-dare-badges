@@ -2,7 +2,7 @@
 
 # @ludum-dare-badges/demo
 
-[![img](https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/badge/woofers/ludum-dare-badges)](https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/results/woofers/react-ludum-dare)
+[![img](https://github.com/woofers/ludum-dare-badges/workflows/build/badge.svg)](https://github.com/woofers/ludum-dare-badges/actions)
 
 Demo site used to showcase and build a [@ludum-dare-badges/api](https://github.com/woofers/ludum-dare-badges/tree/master/packages/api) query
 for a Ludum Dare results badge.
