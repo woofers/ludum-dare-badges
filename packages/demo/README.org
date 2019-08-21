@@ -8,7 +8,7 @@
 
 [[https://github.com/woofers/ludum-dare-badges/actions][https://github.com/woofers/ludum-dare-badges/workflows/build/badge.svg]]
 
-Demo site used to showcase and build a [[https://github.com/woofers/ludum-dare-badges/tree/master/packages/api][@ludum-dare-badges/api]] query
+Demo site used to showcase and build a *[[https://github.com/woofers/ludum-dare-badges/tree/master/packages/api][@ludum-dare-badges/api]]* query
 for a Ludum Dare results badge.
 
 Site is [[https://www.gatsbyjs.org/][Gatsby]] based and built using [[https://material-ui.com/][Material UI]].
