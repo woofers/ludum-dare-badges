@@ -64,6 +64,8 @@ Or more generalized:
 
 Self hosting can done easily though [Now](https://zeit.co/now)'s serverless platform.
 
+[![img](https://deploy.now.sh/static/button.svg "Deploy to now")](https://zeit.co/new/project?template=woofers/ludum-dare-badges)
+
 Simply install the [Now CLI](https://github.com/zeit/now-cli) with:
 
 **Yarn**

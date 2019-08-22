@@ -62,6 +62,9 @@ badges.vandoorn.ca/:id/:game/badge.<type>
 
 Self hosting can done easily though [[https://zeit.co/now][Now]]'s serverless platform.
 
+#+CAPTION: Deploy to now
+[[https://zeit.co/new/project?template=woofers/ludum-dare-badges][https://deploy.now.sh/static/button.svg]]
+
 Simply install the [[https://github.com/zeit/now-cli][Now CLI]] with:
 
 *Yarn*
