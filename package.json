@@ -1,6 +1,6 @@
 {
   "name": "ludum-dare-badges",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SVG & PNG badges for Ludum Dare Game Jam results",
   "scripts": {
     "build:api": "yarn install:api",

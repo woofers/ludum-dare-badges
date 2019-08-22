@@ -1,6 +1,6 @@
 {
   "name": "@ludum-dare-badges/api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SVG & PNG badges for Ludum Dare Game Jam results",
   "files": [
     "src",
