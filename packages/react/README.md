@@ -22,12 +22,14 @@ Display Ludum Dare Game Jam results in React.
 
 # Usage
 
-    import React from 'react'
-    import Widget from '@ludum-dare-badges/react'
+```jsx
+import React from 'react'
+import Widget from '@ludum-dare-badges/react'
 
-    const App = () => (
-      <Widget game="44/alien-e-x-p-a-n-s-i-o-n" />
-    )
+const App = () => (
+  <Widget game="44/alien-e-x-p-a-n-s-i-o-n" />
+)
+```
 
 Simply add the game widget to the React application using JSX.
 
