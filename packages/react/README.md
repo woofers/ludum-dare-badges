@@ -22,16 +22,18 @@ Display Ludum Dare Game Jam results in React.
 
 # Usage
 
-    import React from 'react'
-    import Widget from '@ludum-dare-badges/react'
+```jsx
+import React from 'react'
+import Widget from '@ludum-dare-badges/react'
 
-    const App = () => (
-      <Widget game="44/alien-e-x-p-a-n-s-i-o-n" />
-    )
+const App = () => (
+  <Widget game="44/alien-e-x-p-a-n-s-i-o-n" />
+)
+```
 
 Simply add the game widget to the React application using JSX.
 
-The React component will simply call [@ludum-dare-badges/api](https://github.com/woofers/ludum-dare-badges/tree/master/packages/api)
+The React component will simply call ****[@ludum-dare-badges/api](https://github.com/woofers/ludum-dare-badges/tree/master/packages/api)****
 to obtain the results badge.
 
 
@@ -43,3 +45,12 @@ to obtain the results badge.
 The namespace of the game on the ldjam site **Required**
 
 `game` requires both the Ludum Dare number and the game title (eg. `44/alien-e-x-p-a-n-s-i-o-n`  for Ludum Dare 44)
+
+
+### Type
+
+The image format type to display the badge as. **Default:** `svg`
+
+Can be either `svg` or `png`.
+
+`svg` is recommended for better font rendering.

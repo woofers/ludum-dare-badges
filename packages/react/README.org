@@ -39,7 +39,7 @@ const App = () => (
 
 Simply add the game widget to the React application using JSX.
 
-The React component will simply call [[https://github.com/woofers/ludum-dare-badges/tree/master/packages/api][@ludum-dare-badges/api]]
+The React component will simply call **[[https://github.com/woofers/ludum-dare-badges/tree/master/packages/api][@ludum-dare-badges/api]]**
 to obtain the results badge.
 
 ** Props
@@ -47,3 +47,10 @@ to obtain the results badge.
 The namespace of the game on the ldjam site *Required*
 
 ~game~ requires both the Ludum Dare number and the game title (eg. ~44/alien-e-x-p-a-n-s-i-o-n~  for Ludum Dare 44)
+
+*** Type
+The image format type to display the badge as. *Default:* ~svg~
+
+Can be either ~svg~ or ~png~.
+
+~svg~ is recommended for better font rendering.
