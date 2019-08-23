@@ -1,7 +1,6 @@
 # @ludum-dare-badges/react
-[![img](https://github.com/woofers/ludum-dare-badges/workflows/build/badge.svg)](https://github.com/woofers/ludum-dare-badges/actions) [![img](https://david-dm.org/woofers/@ludum-dare-badges/react.svg)](https://www.npmjs.com/package/@ludum-dare-badges/react) [![img](https://badge.fury.io/js/@ludum-dare-badges/react.svg)](https://www.npmjs.com/package/@ludum-dare-badges/react) [![img](https://img.shields.io/npm/dt/@ludum-dare-badges/react.svg)](https://www.npmjs.com/package/@ludum-dare-badges/react) [![img](https://img.shields.io/npm/l/@ludum-dare-badges/react.svg)](https://github.com/woofers/ludum-dare-badges/blob/master/License.txt)
 
-
+[![img](https://github.com/woofers/ludum-dare-badges/workflows/build/badge.svg)](https://github.com/woofers/ludum-dare-badges/actions) [![img](https://david-dm.org/woofers/@ludum-dare-badges/react.svg)](https://www.npmjs.com/package/@ludum-dare-badges/react) [![img](https://img.shields.io/npm/v/@ludum-dare-badges/react.svg?color=success&label=npm%20package)](https://www.npmjs.com/package/@ludum-dare-badges/react) [![img](https://img.shields.io/npm/dt/@ludum-dare-badges/react.svg)](https://www.npmjs.com/package/@ludum-dare-badges/react) [![img](https://img.shields.io/npm/l/@ludum-dare-badges/react.svg)](https://github.com/woofers/ludum-dare-badges/blob/master/License.txt)
 
 Display Ludum Dare Game Jam results in React.
 
@@ -23,14 +22,12 @@ Display Ludum Dare Game Jam results in React.
 
 # Usage
 
-```jsx
-import React from 'react'
-import Widget from '@ludum-dare-badges/react'
+    import React from 'react'
+    import Widget from '@ludum-dare-badges/react'
 
-const App = () => (
-  <Widget game="44/alien-e-x-p-a-n-s-i-o-n" />
-)
-```
+    const App = () => (
+      <Widget game="44/alien-e-x-p-a-n-s-i-o-n" />
+    )
 
 Simply add the game widget to the React application using JSX.
 
