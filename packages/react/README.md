@@ -45,3 +45,12 @@ to obtain the results badge.
 The namespace of the game on the ldjam site **Required**
 
 `game` requires both the Ludum Dare number and the game title (eg. `44/alien-e-x-p-a-n-s-i-o-n`  for Ludum Dare 44)
+
+
+### Type
+
+The image format type to display the badge as. **Default:** `svg`
+
+Can be either `svg` or `png`.
+
+`svg` is recommended for better font rendering.
