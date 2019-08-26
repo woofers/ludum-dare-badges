@@ -17,6 +17,13 @@ const ratingsKey = num => categoryKey(num)
 const url = (id, game) => `https://api.ldjam.com/vx/node2/walk/1/events/ludum-dare/${id}/${game}?node&parent`
 const link = (id, game) => `https://ldjam.com/events/ludum-dare/${id}/${game}`
 
+const notFound = (id, game) => {
+  return {
+    title:'Game not found',
+    message:`${game} can not be found for Jam #${id}`
+  }
+}
+
 export const getData = (id, game) => {
   return new Promise((resolve, reject) => {
     if (!id && !game) {
@@ -32,15 +39,11 @@ export const getData = (id, game) => {
       })
     }
     get(url(id, game)).then(body => {
+      if (body.status !== 200) return reject(notFound(id, game))
       const amount = body.node[0].grade
       const ratings = body.node[0].magic
       const categories = body.node[1].meta
-      if (!categories || categories.length <= 0) {
-        return reject({
-          title:'Game not found',
-          message:`${game} can not be found for Jam #${id}`
-        })
-      }
+      if (!categories || categories.length <= 0) return reject(notFound(id, game))
       const stats = range(cats).map(i => ({
         index: i,
         category: categories[categoryKey(i)],
@@ -49,6 +52,10 @@ export const getData = (id, game) => {
         rating: amount[ratingsKey(i)] || 0
       }))
       return resolve({ game: body.node[0].name, stats, link: link(id, game) })
+    })
+    .catch(err => {
+      if (err.title) return reject(err)
+      return reject(notFound(id, game))
     })
   })
 }
