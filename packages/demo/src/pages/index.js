@@ -18,6 +18,13 @@ const IndexPage = () => {
   const [name, setName] = useState('')
   const [type, setType] = useState('svg')
   const game = id && name ? `${id}/${name}`: ''
+  const url = () => {
+    if (typeof window === 'undefined') return 'badges.vandoorn.ca/'
+    return window.location.href
+      .replace('https://', '')
+      .replace('http://', '')
+      .substring(0, 19)
+  }
   return (
     <Layout>
       <Helmet
@@ -27,7 +34,7 @@ const IndexPage = () => {
       <h1>Ludum Dare Badges</h1>
       <h3>SVG badges for Ludum Dare Game Jam results</h3>
       <Form>
-        <span css={hide}><Input width="200px" disabled label="badges.vandoorn.ca/" /></span>
+        <span css={hide}><Input width="200px" disabled label={url()} /></span>
         <Input width="145px" label="Ludum Dare #" placeholder="44" type="number" set={setId} />
         <span css={hide}><Input width="35px" disabled label="/" /></span>
         <Input width="205px" label="Game" placeholder="alien-e-x-p-a-n-s-i-o-n" set={setName} />
