@@ -3,6 +3,7 @@ import { ith, NA } from '../util/ith'
 import range from '../util/range'
 import { truncate, greaterThan } from '../util/truncate'
 import { average, category } from '../util/format'
+import sanitize from 'sanitize-html'
 
 const MAX_NAME = 36
 const MAX_GRADE = 999
@@ -17,6 +18,13 @@ const ratingsKey = num => categoryKey(num)
 const url = (id, game) => `https://api.ldjam.com/vx/node2/walk/1/events/ludum-dare/${id}/${game}?node&parent`
 const link = (id, game) => `https://ldjam.com/events/ludum-dare/${id}/${game}`
 
+const notFound = (id, game) => {
+  return {
+    title:'Game not found',
+    message:`${sanitize(game)} can not be found for Jam #${sanitize(id)}`
+  }
+}
+
 export const getData = (id, game) => {
   return new Promise((resolve, reject) => {
     if (!id && !game) {
@@ -28,19 +36,15 @@ export const getData = (id, game) => {
     else if (isNaN(id)) {
       return reject({
         title: 'Invalid Ludum Dare #',
-        message: `/${id}/ is not a valid Ludum Dare Jam #`
+        message: `/${sanitize(id)}/ is not a valid Ludum Dare Jam #`
       })
     }
     get(url(id, game)).then(body => {
+      if (body.status !== 200) return reject(notFound(id, game))
       const amount = body.node[0].grade
       const ratings = body.node[0].magic
       const categories = body.node[1].meta
-      if (!categories || categories.length <= 0) {
-        return reject({
-          title:'Game not found',
-          message:`${game} can not be found for Jam #${id}`
-        })
-      }
+      if (!categories || categories.length <= 0) return reject(notFound(id, game))
       const stats = range(cats).map(i => ({
         index: i,
         category: categories[categoryKey(i)],
@@ -49,6 +53,10 @@ export const getData = (id, game) => {
         rating: amount[ratingsKey(i)] || 0
       }))
       return resolve({ game: body.node[0].name, stats, link: link(id, game) })
+    })
+    .catch(err => {
+      if (err.title) return reject(err)
+      return reject(notFound(id, game))
     })
   })
 }
