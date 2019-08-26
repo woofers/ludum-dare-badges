@@ -33,7 +33,7 @@ export default it =>
   <text x="25" y="112" font-size="24" fill="#d0d0d8" font-weight="bold">${sanitize(it.game)}</text>
 
   <!-- Error Message -->
-  <text transform="scale(0.85, 1); translate(6, 0)" x="25" y="140" font-size="16px" font-weight="300" fill="#d0d0d8"><tspan>${sanitize(it.error || '')}</tspan></text>
+  <text transform="scale(0.85, 1); translate(6, 0)" x="25" y="140" font-size="16px" font-weight="300" fill="#d0d0d8"><tspan>${it.error || ''}</tspan></text>
 
   <!-- Logo -->
   ${!it.error ? '<a xlink:href="${it.link}" target="_blank" rel="noopener noreferrer" xlink:title="View Ludum Dare Page">' : ''}

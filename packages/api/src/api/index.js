@@ -3,6 +3,7 @@ import { ith, NA } from '../util/ith'
 import range from '../util/range'
 import { truncate, greaterThan } from '../util/truncate'
 import { average, category } from '../util/format'
+import sanitize from 'sanitize-html'
 
 const MAX_NAME = 36
 const MAX_GRADE = 999
@@ -20,7 +21,7 @@ const link = (id, game) => `https://ldjam.com/events/ludum-dare/${id}/${game}`
 const notFound = (id, game) => {
   return {
     title:'Game not found',
-    message:`${game} can not be found for Jam #${id}`
+    message:`${sanitize(game)} can not be found for Jam #${sanitize(id)}`
   }
 }
 
@@ -35,7 +36,7 @@ export const getData = (id, game) => {
     else if (isNaN(id)) {
       return reject({
         title: 'Invalid Ludum Dare #',
-        message: `/${id}/ is not a valid Ludum Dare Jam #`
+        message: `/${sanitize(id)}/ is not a valid Ludum Dare Jam #`
       })
     }
     get(url(id, game)).then(body => {
