@@ -19,6 +19,8 @@ export default (req, res) => {
     .then(template)
     .then(data => type(data, rasterize))
     .then(img => {
+      const maxAge = 4 * 60 * 60 * 1000
+      res.setHeader('Cache-Control', `public, immutable, no-transform, s-maxage=${maxAge}, max-age=${maxAge}`)
       res.setHeader('Content-Type', img.type)
       res.send(img.data)
     })
