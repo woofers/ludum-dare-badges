@@ -11,8 +11,34 @@ const style = css`
     color: #d0d0d8;
   }
 
+  h1 {
+    color: #ffa500;
+  }
+
+  h4 {
+    font-style: italic;
+  }
+
   a {
     color: #ffa500;
+  }
+
+  ::selection {
+    color: #fff;
+    background: rgba(255, 165, 0, 0.85);
+  }
+
+  ::-moz-selection {
+    color: #fff;
+    background: rgba(255, 165, 0, 0.85);
+  }
+
+  img::selection {
+    background: rgba(255, 165, 0, 0.25);
+  }
+
+  img::-moz-selection {
+    background: rgba(255, 165, 0, 0.25);
   }
 `
 
