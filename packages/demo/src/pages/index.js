@@ -13,17 +13,20 @@ const hide = css`
   }
 `
 
-const IndexPage = () => {
+const IndexPage = p => {
   const [id, setId] = useState('')
   const [name, setName] = useState('')
   const [type, setType] = useState('svg')
   const game = id && name ? `${id}/${name}`: ''
   const url = () => {
-    if (typeof window === 'undefined') return 'badges.vandoorn.ca/'
-    return window.location.href
+    if (!p.location.host) return ''
+    return `${p.location.protocol}//${p.location.host}`
+  }
+  const shortUrl = () => {
+    return url()
       .replace('https://', '')
       .replace('http://', '')
-      .substring(0, 19)
+      .substring(0, 18)
   }
   return (
     <Layout>
@@ -34,14 +37,14 @@ const IndexPage = () => {
       <h1>Ludum Dare Badges</h1>
       <h3>SVG badges for Ludum Dare Game Jam results</h3>
       <Form>
-        <span css={hide}><Input width="200px" disabled label={url()} /></span>
+        <span css={hide}><Input width="200px" disabled label={`${shortUrl()}/`} /></span>
         <Input width="145px" label="Ludum Dare #" placeholder="44" type="number" set={setId} />
         <span css={hide}><Input width="35px" disabled label="/" /></span>
         <Input width="205px" label="Game" placeholder="alien-e-x-p-a-n-s-i-o-n" set={setName} />
         <span css={hide}><Input width="90px" disabled label="/badge." /></span>
         <Select options={['svg', 'png']} set={setType} value={type} />
       </Form>
-      <Widget game={game} type={type} />
+      { url() ? <Widget host={url()} game={game} type={type} /> : null }
     </Layout>
   )
 }

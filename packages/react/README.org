@@ -54,3 +54,8 @@ The image format type to display the badge as. *Default:* ~svg~
 Can be either ~svg~ or ~png~.
 
 ~svg~ is recommended for better font rendering.
+
+*** Type
+The host of the API. *Default:* ~https://badges.vandoorn.ca~
+
+Likely only set in the case that the API is self-hosted.
