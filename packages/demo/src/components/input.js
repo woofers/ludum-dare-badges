@@ -34,9 +34,10 @@ const style = css`
     border-color: #fff !important;
   }
   .Mui-disabled {
+    font-size: 1.05rem;
     color: #a5a5ab !important;
     fieldset {
-      border-color: #a5a5ab !important;
+      border: none !important;
     }
   }
 `
