@@ -28,6 +28,7 @@
     "build": "gatsby build && cp -r public ../../.",
     "dev": "gatsby develop",
     "start": "gatsby develop",
+    "local": "yarn add ../react ",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "clean": "rimraf public"
   },
