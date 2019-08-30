@@ -11,7 +11,7 @@ const NotFoundPage = () => (
     </Helmet>
     <h1>404</h1>
     <h3>Route does not exist</h3>
-    <Link to="/">Read the docs here</Link>
+    <Link to="/">Back to demo</Link>
   </Layout>
 )
 

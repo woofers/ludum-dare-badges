@@ -35,7 +35,7 @@ const IndexPage = p => {
         htmlAttributes={{ lang: 'en' }}>
       </Helmet>
       <h1>Ludum Dare Badges</h1>
-      <h3>SVG badges for Ludum Dare Game Jam results</h3>
+      <h4>SVG badges for Ludum Dare Game Jam results</h4>
       <Form>
         <span css={hide}><Input width="200px" disabled label={`${shortUrl()}/`} /></span>
         <Input width="145px" label="Ludum Dare #" placeholder="44" type="number" set={setId} />
