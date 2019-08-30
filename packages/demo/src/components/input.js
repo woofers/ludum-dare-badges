@@ -3,8 +3,6 @@ import TextField from '@material-ui/core/TextField'
 import { css } from '@emotion/core'
 
 const style = css`
-  margin-right: 2px;
-  margin-left: 2px;
 
   input[type='number'] {
     -moz-appearance: textfield;
@@ -38,6 +36,11 @@ const style = css`
     color: #a5a5ab !important;
     fieldset {
       border: none !important;
+      background: #2d353e;
+      border-bottom-left-radius: 0 !important;
+      border-top-left-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+      border-top-right-radius: 0 !important;
     }
   }
 `
