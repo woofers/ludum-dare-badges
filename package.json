@@ -25,5 +25,6 @@
   },
   "homepage": "https://github.com/woofers/ludum-dare-badges#readme",
   "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {}
 }
