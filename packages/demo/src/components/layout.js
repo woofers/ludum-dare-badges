@@ -3,6 +3,8 @@ import React from 'react'
 import { css, Global } from '@emotion/core'
 
 const style = css`
+  @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
   body {
     background: #3d4752;
   }
