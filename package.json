@@ -24,7 +24,7 @@
     "url": "https://github.com/woofers/ludum-dare-badges/issues"
   },
   "engines": {
-    "node": "10.x"
+    "node": "12.x"
   },
   "homepage": "https://github.com/woofers/ludum-dare-badges#readme",
   "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",
