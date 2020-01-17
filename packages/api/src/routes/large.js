@@ -7,7 +7,7 @@ const type = (data, rasterize) => {
   return new Promise((resolve, reject) => {
     if (!rasterize) return resolve({ data, type: 'image/svg+xml' })
     convertToPng(data)
-      .then(data => resolve({ data, type: 'image/png' }))
+      .then(data => resolve({ data, type: 'image/svg+xml' }))
       .catch(err => reject(err))
   })
 }
