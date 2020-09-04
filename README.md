@@ -11,15 +11,6 @@ API used to dynamically generate SVG and PNG Ludum Dare results badges in real-t
 **Note:** This project is community made and not endorsed by the offical Ludum Dare creator(s).
 
 
-# Packages
-
-This monorepo is split up into the following packages:
-
--   **[@ludum-dare-badges/api](https://github.com/woofers/ludum-dare-badges/tree/master/packages/api)** - Serveless API used to generate SVG & PNG badges
--   **[@ludum-dare-badges/demo](https://github.com/woofers/ludum-dare-badges/tree/master/packages/demo)** - Demo site used to showcase how to build a API query for a badge
--   **[@ludum-dare-badges/react](https://github.com/woofers/ludum-dare-badges/tree/master/packages/react)** - React wrapper component which forms and calls the API based off passed props.
-
-
 # Examples
 
 **SVG Badge:**
@@ -46,7 +37,7 @@ the path would be `44/alien-e-x-p-a-n-s-i-o-n/badge.svg`
 
 You can also think of it as adding `/badge.svg` to the existing Ludum Dare path:
 
-![img](./packages/api/screenshots/url.png "URL Path")
+![img](./screenshots/url.png "URL Path")
 
 
 ## Hosted
@@ -64,21 +55,21 @@ Or more generalized:
 
 ## Self Hosting
 
-Self hosting can done easily though [Now](https://zeit.co/now)'s serverless platform.
+Self hosting can done easily though [Vercel](https://vercel.com/home)'s serverless platform.
 
-[![img](https://deploy.now.sh/static/button.svg "Deploy to now")](https://zeit.co/new/project?template=woofers/ludum-dare-badges)
+[![img](https://vercel.com/button "Deploy to Vercel")](https://vercel.com/import/project?template=woofers/ludum-dare-badges)
 
-Simply install the [Now CLI](https://github.com/zeit/now-cli) with:
+Simply install the [Vercel CLI](https://github.com/vercel/vercel/tree/master/packages/now-cli) with:
 
 **Yarn**
 
-    yarn global add now
+    yarn global add vercel
 
 **npm**
 
-    npm install -g now
+    npm install -g vercel
 
-and type `now deploy` in the root of the monorepo.
+and type `vercel` in the root of the monorepo.
 
 To form the API query follow the steps above with and replace the domain
 with the domain of your self hosted instance:

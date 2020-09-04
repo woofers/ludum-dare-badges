@@ -21,11 +21,11 @@ jobs:
         GITHUB_CONTEXT: ${{ toJson(github) }}
       run: echo "$GITHUB_CONTEXT"
     - name: Install
-      run: yarn --cwd packages/react install
+      run: yarn --cwd _react install
     - name: Build
-      run: yarn --cwd packages/react build
+      run: yarn --cwd _react build
     - name: Test
-      run: yarn --cwd packages/react test
+      run: yarn --cwd _react test
     - name: Publish
       if: startsWith(github.ref, 'refs/tags/')
       run: yarn publish packages/react --access public

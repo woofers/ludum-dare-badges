@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/(.*)/(.*)/badge.(.*)", "destination": "/api/$1/$2/badge.svg" },
+    { "source": "/badge.(.*)", "destination": "api/badge.svg" }
+  ],
+  "github": {
+    "enabled": true,
+    "silent": true
+  }
+}
