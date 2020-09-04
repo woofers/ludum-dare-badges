@@ -3,6 +3,9 @@ import { ith, NA } from '../util/ith'
 import range from '../util/range'
 import { truncate, greaterThan } from '../util/truncate'
 import { average, category } from '../util/format'
+import { convertToPng } from '../util/png'
+import { large as template } from '../svg'
+import results from '../models/results'
 import sanitize from 'sanitize-html'
 
 const MAX_NAME = 36
@@ -69,7 +72,7 @@ export const getData = (id, game) => {
   })
 }
 
-export const svgData = (id, game) => {
+const svgData = (id, game) => {
   return new Promise((resolve, reject) => {
     getData(id, game).then(data => {
       const stats = data.stats.map(stat => ({
@@ -82,4 +85,27 @@ export const svgData = (id, game) => {
       resolve({ ...data, game: truncate(data.game, MAX_NAME), stats })
     }).catch(err => reject(err))
   })
+}
+
+const type = (data, rasterize) => {
+  return new Promise((resolve, reject) => {
+    if (!rasterize) return resolve({ data, type: 'image/svg+xml' })
+    convertToPng(data)
+      .then(data => resolve({ data, type: 'image/svg+xml' }))
+      .catch(err => reject(err))
+  })
+}
+
+export default (id, game, res, rasterize) => {
+  svgData(id, game)
+    .catch(err => Promise.resolve(results(err.title, '', err.message)))
+    .then(template)
+    .then(data => type(data, rasterize))
+    .then(img => {
+      const maxAge = 4 * 60 * 60 * 1000
+      res.setHeader('Cache-Control', `public, immutable, no-transform, s-maxage=${maxAge}, max-age=${maxAge}`)
+      res.setHeader('Content-Type', img.type)
+      res.send(img.data)
+    })
+    .catch(err => res.send(err))
 }
