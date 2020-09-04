@@ -37,7 +37,7 @@ the path would be `44/alien-e-x-p-a-n-s-i-o-n/badge.svg`
 
 You can also think of it as adding `/badge.svg` to the existing Ludum Dare path:
 
-![img](./packages/api/screenshots/url.png "URL Path")
+![img](./screenshots/url.png "URL Path")
 
 
 ## Hosted
@@ -55,7 +55,7 @@ Or more generalized:
 
 ## Self Hosting
 
-Self hosting can done easily though [Now](https://zeit.co/now)'s serverless platform.
+Self hosting can done easily though [Vercel](https://vercel.com/home)'s serverless platform.
 
 [![img](https://vercel.com/button "Deploy to Vercel")](https://vercel.com/import/project?template=woofers/ludum-dare-badges)
 
@@ -69,7 +69,7 @@ Simply install the [Vercel CLI](https://github.com/vercel/vercel/tree/master/pac
 
     npm install -g vercel
 
-and type `now deploy` in the root of the monorepo.
+and type `vercel` in the root of the monorepo.
 
 To form the API query follow the steps above with and replace the domain
 with the domain of your self hosted instance:
