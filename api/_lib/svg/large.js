@@ -30,7 +30,7 @@ export default it =>
   <rect x="0" y="0" rx="12" ry="12" width="454" height="363" fill="#1f2429" />
 
   <!-- Title -->
-  <text x="25" y="112" font-size="24" fill="#d0d0d8" font-weight="bold">${sanitize(it.game)}</text>
+  <text x="25" y="112" font-size="24" fill="#d0d0d8" font-weight="800">${sanitize(it.game)}</text>
 
   <!-- Error Message -->
   <text transform="translate(1, 0)" x="25" y="140" font-size="16px" font-weight="300" fill="#d0d0d8"><tspan>${it.error || ''}</tspan></text>
