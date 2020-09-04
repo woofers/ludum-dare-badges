@@ -23,6 +23,7 @@
     "react-helmet": "^6.1.0",
     "react-typography": "^0.16.19",
     "sanitize-html": "^1.27.4",
+    "svg2img": "^0.8.1",
     "typography": "^0.16.19",
     "typography-plugin-code": "^0.16.19",
     "typography-theme-lawton": "^0.16.19"
