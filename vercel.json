@@ -1,8 +1,8 @@
 {
   "version": 2,
   "rewrites": [
-    { "source": "/(.*)/(.*)/badge.(.*)", "destination": "/api/$1/$2/badge.svg" },
-    { "source": "/badge.(.*)", "destination": "api/badge.svg" }
+    { "source": "/(.*)/(.*)/badge.(.*)", "destination": "/api/$1/$2/badge.$3" },
+    { "source": "/badge.(.*)", "destination": "api/badge.$1" }
   ],
   "github": {
     "enabled": true,

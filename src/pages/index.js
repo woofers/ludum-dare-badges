@@ -43,7 +43,7 @@ const IndexPage = p => {
         <span css={hide}><Input width="35px" disabled label="/" /></span>
         <Input width="205px" label="Game" placeholder="alien-e-x-p-a-n-s-i-o-n" set={setName} />
         <span css={hide}><Input width="90px" disabled label="/badge." /></span>
-        <Select options={['svg']} set={setType} value={type} />
+        <Select options={['svg', 'png']} set={setType} value={type} />
         <Copy disabled={!game} value={`${url()}/${game}/badge.${type}`} />
       </Form>
       { url() ? <Widget host={url()} game={game} type={type} /> : null }
