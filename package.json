@@ -34,6 +34,7 @@
     "start": "NODE_ENV=development vercel dev",
     "preinstall": "yarn --cwd _react install && yarn --cwd _react build",
     "build": "gatsby build",
+    "now-build": "yum install libuuid-devel libmount-devel && cp /lib64/{libuuid,libmount,libblkid}.so.1 node_modules/canvas/build/Release/ && yarn run build",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "clean": "rimraf public && yarn --cwd _react clean"
   },
