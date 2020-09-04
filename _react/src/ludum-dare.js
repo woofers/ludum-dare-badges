@@ -1,9 +1,9 @@
 import React from 'react'
 
-const LudumDare = p => {
-  const api = `${p.host}/${p.game}/badge.${p.type}`
-  const name = p.game.substring(p.game.indexOf('/') + 1)
-  return <img src={api} alt={`${name} Ludum Dare results`} />
+const LudumDare = ({ host, game, type, ...rest }) => {
+  const api = `${host}/${game}/badge.${type}`
+  const name = game.substring(game.indexOf('/') + 1)
+  return <img src={api} alt={`${name} Ludum Dare results`} {...rest} />
 }
 
 LudumDare.defaultProps = {
