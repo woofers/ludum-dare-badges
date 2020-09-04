@@ -5,7 +5,7 @@
     { "source": "/badge.(.*)", "destination": "api/badge.svg" }
   ],
   "github": {
-    "enabled": false,
+    "enabled": true,
     "silent": true
   }
 }
