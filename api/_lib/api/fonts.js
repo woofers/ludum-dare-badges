@@ -7,8 +7,8 @@ export default () => {
   registerFont(resolve('./fonts/Raleway/Raleway-ExtraBold.ttf'), { family: 'Raleway', weight: 800, style: 'normal' })
   registerFont(resolve('./fonts/Raleway/Raleway-ExtraBoldItalic.ttf'), { family: 'Raleway', weight: 800, style: 'italic' })
 
-  registerFont(resolve('./fonts/Roboto/Roboto-Light.ttf'), { family: 'Roboto', weight: 600, style: 'normal' })
-  registerFont(resolve('./fonts/Roboto/Roboto-LightItalic.ttf'), { family: 'Roboto', weight: 600, style: 'italic' })
+  registerFont(resolve('./fonts/Roboto/Roboto-Light.ttf'), { family: 'Roboto', weight: 300, style: 'normal' })
+  registerFont(resolve('./fonts/Roboto/Roboto-LightItalic.ttf'), { family: 'Roboto', weight: 300, style: 'italic' })
   registerFont(resolve('./fonts/Roboto/Roboto-Bold.ttf'), { family: 'Roboto', weight: 800, style: 'normal' })
   registerFont(resolve('./fonts/Roboto/Roboto-BoldItalic.ttf'), { family: 'Roboto', weight: 800, style: 'italic' })
 }
