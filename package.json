@@ -31,9 +31,9 @@
   "scripts": {
     "watch": "NODE_ENV=development vercel dev",
     "start": "NODE_ENV=development vercel dev",
-    "build": "yarn --cwd _react install && yarn --cwd _react build && gatsby build",
+    "build": "yarn --cwd react install && yarn --cwd react build && gatsby build",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "clean": "rimraf public"
+    "clean": "rimraf public && yarn --cwd react clean"
   },
   "repository": {
     "type": "git",
