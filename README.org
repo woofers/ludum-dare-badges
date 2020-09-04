@@ -64,22 +64,22 @@ badges.vandoorn.ca/:id/:game/badge.<type>
 
 Self hosting can done easily though [[https://zeit.co/now][Now]]'s serverless platform.
 
-#+CAPTION: Deploy to now
-[[https://zeit.co/new/project?template=woofers/ludum-dare-badges][https://deploy.now.sh/static/button.svg]]
+#+CAPTION: Deploy with Vercel
+https://vercel.com/button
 
-Simply install the [[https://github.com/zeit/now-cli][Now CLI]] with:
+Simply install the [[https://github.com/vercel/vercel/tree/master/packages/now-cli][Vercel CLI]] with:
 
 *Yarn*
 #+BEGIN_SRC
-yarn global add now
+yarn global add vercel
 #+END_SRC
 
 *npm*
 #+BEGIN_SRC
-npm install -g now
+npm install -g vercel
 #+END_SRC
 
-and type ~now deploy~ in the root of the monorepo.
+and type ~vercel~ in the root of the monorepo.
 
 To form the API query follow the steps above with and replace the domain
 with the domain of your self hosted instance:

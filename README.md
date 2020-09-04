@@ -57,17 +57,17 @@ Or more generalized:
 
 Self hosting can done easily though [Now](https://zeit.co/now)'s serverless platform.
 
-[![img](https://deploy.now.sh/static/button.svg "Deploy to now")](https://zeit.co/new/project?template=woofers/ludum-dare-badges)
+[![img](https://vercel.com/button "Deploy to Vercel")](https://vercel.com/import/project?template=woofers/ludum-dare-badges)
 
-Simply install the [Now CLI](https://github.com/zeit/now-cli) with:
+Simply install the [Vercel CLI](https://github.com/vercel/vercel/tree/master/packages/now-cli) with:
 
 **Yarn**
 
-    yarn global add now
+    yarn global add vercel
 
 **npm**
 
-    npm install -g now
+    npm install -g vercel
 
 and type `now deploy` in the root of the monorepo.
 
