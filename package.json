@@ -31,7 +31,7 @@
   "scripts": {
     "watch": "NODE_ENV=development vercel dev",
     "start": "NODE_ENV=development vercel dev",
-    "build": "vercel build",
+    "build": "gatsby build",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "clean": "rimraf public"
   },
