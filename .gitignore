@@ -91,3 +91,5 @@ dist
 public
 package-lock.json
 yarn.lock
+
+.vercel
