@@ -11,15 +11,6 @@ API used to dynamically generate SVG and PNG Ludum Dare results badges in real-t
 **Note:** This project is community made and not endorsed by the offical Ludum Dare creator(s).
 
 
-# Packages
-
-This monorepo is split up into the following packages:
-
--   **[@ludum-dare-badges/api](https://github.com/woofers/ludum-dare-badges/tree/master/packages/api)** - Serveless API used to generate SVG & PNG badges
--   **[@ludum-dare-badges/demo](https://github.com/woofers/ludum-dare-badges/tree/master/packages/demo)** - Demo site used to showcase how to build a API query for a badge
--   **[@ludum-dare-badges/react](https://github.com/woofers/ludum-dare-badges/tree/master/packages/react)** - React wrapper component which forms and calls the API based off passed props.
-
-
 # Examples
 
 **SVG Badge:**
