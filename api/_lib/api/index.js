@@ -83,7 +83,7 @@ const type = (data, rasterize) => {
   return new Promise((resolve, reject) => {
     if (!rasterize) return resolve({ data, type: 'image/svg+xml' })
     convertToPng(data)
-      .then(data => resolve({ data, type: 'image/svg+xml' }))
+      .then(data => resolve({ data, type: 'image/png' }))
       .catch(err => reject(err))
   })
 }
@@ -101,3 +101,5 @@ export default (id, game, res, rasterize) => {
     })
     .catch(err => res.send(err))
 }
+
+export { default as registerFonts } from './fonts'
