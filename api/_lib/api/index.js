@@ -101,3 +101,5 @@ export default (id, game, res, rasterize) => {
     })
     .catch(err => res.send(err))
 }
+
+export { default as registerFonts } from './fonts'

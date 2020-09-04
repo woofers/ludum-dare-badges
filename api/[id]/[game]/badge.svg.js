@@ -1,4 +1,6 @@
-import fetchImage from '../../_lib/api'
+import fetchImage, { registerFonts } from '../../_lib/api'
+
+registerFonts()
 
 export default (req, res) => {
   const { id, game } = req.query
