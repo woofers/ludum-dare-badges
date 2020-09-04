@@ -2,19 +2,38 @@
   "name": "ludum-dare-badges",
   "version": "1.1.0",
   "description": "SVG & PNG badges for Ludum Dare Game Jam results",
+  "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",
+  "dependencies": {
+    "@emotion/core": "^10.0.22",
+    "@ludum-dare-badges/react": "^1.1.0",
+    "@material-ui/core": "^4.5.1",
+    "axios": "^0.20.0",
+    "emotion-server": "^10.0.17",
+    "emotion-theming": "^10.0.19",
+    "gatsby": "^2.17.4",
+    "gatsby-plugin-emotion": "^4.1.12",
+    "gatsby-plugin-manifest": "^2.2.23",
+    "gatsby-plugin-material-ui": "^2.1.6",
+    "gatsby-plugin-react-helmet": "^3.1.13",
+    "gatsby-plugin-typography": "^2.3.14",
+    "react": "^16.9.0",
+    "react-copy-to-clipboard": "^5.0.1",
+    "react-dom": "^16.11.0",
+    "react-emotion": "^10.0.0",
+    "react-helmet": "^6.1.0",
+    "react-typography": "^0.16.19",
+    "sanitize-html": "^1.27.4",
+    "typography": "^0.16.19",
+    "typography-plugin-code": "^0.16.19",
+    "typography-theme-lawton": "^0.16.19"
+  },
+  "license": "MIT",
   "scripts": {
-    "build:react": "yarn --cwd packages/react build",
-    "build:demo": "yarn --cwd packages/demo local && yarn --cwd packages/demo build",
-    "build": "NODE_ENV=production yarn build:react && yarn build:demo",
-    "install:api": "yarn --cwd packages/api install",
-    "install:react": "yarn --cwd packages/react install",
-    "install:demo": "yarn --cwd packages/demo install",
-    "install": "yarn install:api && yarn install:react && yarn install:demo",
-    "clean:react": "yarn --cwd packages/react clean",
-    "clean:demo": "yarn --cwd packages/demo clean",
-    "clean": "yarn clean:react && yarn clean:demo",
-    "watch": "NODE_ENV=development now dev",
-    "dev": "NODE_ENV=development now dev"
+    "watch": "NODE_ENV=development vercel dev",
+    "start": "NODE_ENV=development vercel dev",
+    "build": "yarn --cwd _react install && yarn --cwd _react build && gatsby build",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "clean": "rimraf public"
   },
   "repository": {
     "type": "git",
@@ -23,11 +42,9 @@
   "bugs": {
     "url": "https://github.com/woofers/ludum-dare-badges/issues"
   },
-  "engines": {
-    "node": "12.x"
-  },
-  "homepage": "https://github.com/woofers/ludum-dare-badges#readme",
-  "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",
-  "license": "MIT",
-  "dependencies": {}
+  "homepage": "https://github.com/woofers/ludum-dare-badges/tree/master",
+  "devDependencies": {
+    "rimraf": "^3.0.0",
+    "vercel": "^20.1.0"
+  }
 }
