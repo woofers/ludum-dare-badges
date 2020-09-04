@@ -18,9 +18,16 @@ const ratingsKey = num => categoryKey(num)
 const url = (id, game) => `https://api.ldjam.com/vx/node2/walk/1/events/ludum-dare/${id}/${game}?node&parent`
 const link = (id, game) => `https://ldjam.com/events/ludum-dare/${id}/${game}`
 
+const unavailable = () => {
+  return {
+    title: 'Server Error',
+    message: `The Ludum Dare API appears to be having issues`
+  }
+}
+
 const notFound = (id, game) => {
   return {
-    title:'Game not found',
+    title: 'Game not found',
     message:`${sanitize(game)} can not be found for Jam #${sanitize(id)}`
   }
 }
@@ -56,6 +63,7 @@ export const getData = (id, game) => {
     })
     .catch(err => {
       if (err.title) return reject(err)
+      if (err.code === 'CERT_HAS_EXPIRED') return reject(unavailable())
       return reject(notFound(id, game))
     })
   })
