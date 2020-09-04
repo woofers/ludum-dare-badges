@@ -39,7 +39,7 @@ const App = () => (
 
 Simply add the game widget to the React application using JSX.
 
-The React component will simply call **[[https://github.com/woofers/ludum-dare-badges/tree/master/packages/api][@ludum-dare-badges/api]]**
+The React component will simply call **[[https://github.com/woofers/ludum-dare-badges/tree/master][@ludum-dare-badges/api]]**
 to obtain the results badge.
 
 ** Props
