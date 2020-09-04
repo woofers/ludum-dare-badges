@@ -4,6 +4,7 @@ import range from '../util/range'
 import { truncate, greaterThan } from '../util/truncate'
 import { average, category } from '../util/format'
 import { convertToPng } from '../util/png'
+import minify from '../util/minify'
 import { large as template } from '../svg'
 import results from '../models/results'
 import sanitize from 'sanitize-html'
@@ -81,9 +82,10 @@ const svgData = (id, game) => {
 
 const type = (data, rasterize) => {
   return new Promise((resolve, reject) => {
-    if (!rasterize) return resolve({ data, type: 'image/svg+xml' })
-    convertToPng(data)
-      .then(data => resolve({ data, type: 'image/png' }))
+    const func = rasterize ? convertToPng : minify
+    const type = rasterize ? 'image/png' : 'image/svg+xml'
+    func(data)
+      .then(data => resolve({ data, type }))
       .catch(err => reject(err))
   })
 }
