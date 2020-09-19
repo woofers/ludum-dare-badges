@@ -6,7 +6,7 @@ export default (it, rasterize) =>
   <defs>
     <!-- Fonts -->
     <style type="text/css">
-      @import url("https://fonts.googleapis.com/css?family=Raleway:800|Roboto:300,700");
+      @import url("/fonts/style.css");
       svg > text {
         font-family: Raleway, "Helvetica Neue", Roboto, "Arial Nova", "Segoe UI", "Ubuntu Light", sans-serif;
       }
