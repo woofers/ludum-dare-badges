@@ -93,7 +93,7 @@ const type = (data, rasterize) => {
 export default (id, game, res, rasterize) => {
   svgData(id, game)
     .catch(err => Promise.resolve(results(err.title, '', err.message)))
-    .then(template)
+    .then(it => template(it, rasterize))
     .then(data => type(data, rasterize))
     .then(img => {
       const maxAge = 4 * 60 * 60 * 1000

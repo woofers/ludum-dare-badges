@@ -1,6 +1,6 @@
 import sanitize from 'sanitize-html'
 
-export default it =>
+export default (it, rasterize) =>
 `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="454" height="363" version="1.1">
   <defs>
@@ -72,21 +72,21 @@ export default it =>
   <!-- Placement -->
   <text x="153" y="126" font-size="16px" fill="#d0d0d8">
     <tspan x="153" dy="1.63em" font-weight="800">${sanitize(it.stats[0].grade)}</tspan>
-    <tspan dx="-0.3em" dy="-0.6em" font-weight="300" font-size="12px">${sanitize(it.stats[0].ith)}</tspan>
+    <tspan dx="${rasterize ? '-0.3' : '0.05'}em" dy="-0.6em" font-weight="300" font-size="12px">${sanitize(it.stats[0].ith)}</tspan>
     <tspan x="153" dy="2.08em" font-weight="800">${sanitize(it.stats[1].grade)}</tspan>
-    <tspan dx="-0.3em" dy="-0.6em" font-weight="300" font-size="12px">${sanitize(it.stats[1].ith)}</tspan>
+    <tspan dx="${rasterize ? '-0.3' : '0.05'}em" dy="-0.6em" font-weight="300" font-size="12px">${sanitize(it.stats[1].ith)}</tspan>
     <tspan x="153" dy="2.08em" font-weight="800">${sanitize(it.stats[2].grade)}</tspan>
-    <tspan dx="-0.3em" dy="-0.6em" font-weight="300" font-size="12px">${sanitize(it.stats[2].ith)}</tspan>
+    <tspan dx="${rasterize ? '-0.3' : '0.05'}em" dy="-0.6em" font-weight="300" font-size="12px">${sanitize(it.stats[2].ith)}</tspan>
     <tspan x="153" dy="2.08em" font-weight="800">${sanitize(it.stats[3].grade)}</tspan>
-    <tspan dx="-0.3em" dy="-0.6em" font-weight="300" font-size="12px">${sanitize(it.stats[3].ith)}</tspan>
+    <tspan dx="${rasterize ? '-0.3' : '0.05'}em" dy="-0.6em" font-weight="300" font-size="12px">${sanitize(it.stats[3].ith)}</tspan>
     <tspan x="153" dy="2.08em" font-weight="800">${sanitize(it.stats[4].grade)}</tspan>
-    <tspan dx="-0.3em" dy="-0.6em" font-weight="300" font-size="12px">${sanitize(it.stats[4].ith)}</tspan>
+    <tspan dx="${rasterize ? '-0.3' : '0.05'}em" dy="-0.6em" font-weight="300" font-size="12px">${sanitize(it.stats[4].ith)}</tspan>
     <tspan x="153" dy="2.08em" font-weight="800">${sanitize(it.stats[5].grade)}</tspan>
-    <tspan dx="-0.3em" dy="-0.6em" font-weight="300" font-size="12px">${sanitize(it.stats[5].ith)}</tspan>
+    <tspan dx="${rasterize ? '-0.3' : '0.05'}em" dy="-0.6em" font-weight="300" font-size="12px">${sanitize(it.stats[5].ith)}</tspan>
     <tspan x="153" dy="2.08em" font-weight="800">${sanitize(it.stats[6].grade)}</tspan>
-    <tspan dx="-0.3em" dy="-0.6em" font-weight="300" font-size="12px">${sanitize(it.stats[6].ith)}</tspan>
+    <tspan dx="${rasterize ? '-0.3' : '0.05'}em" dy="-0.6em" font-weight="300" font-size="12px">${sanitize(it.stats[6].ith)}</tspan>
     <tspan x="153" dy="2.08em" font-weight="800">${sanitize(it.stats[7].grade)}</tspan>
-    <tspan dx="-0.3em" dy="-0.6em" font-weight="300" font-size="12px">${sanitize(it.stats[7].ith)}</tspan>
+    <tspan dx="${rasterize ? '-0.3' : '0.05'}em" dy="-0.6em" font-weight="300" font-size="12px">${sanitize(it.stats[7].ith)}</tspan>
   </text>
 
   <!-- Ratings -->
