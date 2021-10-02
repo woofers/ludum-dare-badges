@@ -1,4 +1,4 @@
-[![img](https://github.com/woofers/ludum-dare-badges/workflows/build/badge.svg)](https://github.com/woofers/ludum-dare-badges/actions) [![img](https://david-dm.org/woofers/@ludum-dare-badges/react.svg)](https://www.npmjs.com/package/@ludum-dare-badges/react) [![img](https://img.shields.io/npm/v/@ludum-dare-badges/react.svg?color=success&label=npm%20package)](https://www.npmjs.com/package/@ludum-dare-badges/react) [![img](https://img.shields.io/npm/dt/@ludum-dare-badges/react.svg)](https://www.npmjs.com/package/@ludum-dare-badges/react) [![img](https://img.shields.io/npm/l/@ludum-dare-badges/react.svg)](https://github.com/woofers/ludum-dare-badges/blob/master/License.txt)
+[![img](https://github.com/woofers/ludum-dare-badges/workflows/build/badge.svg)](https://github.com/woofers/ludum-dare-badges/actions) [![img](https://img.shields.io/david/woofers/ludum-dare-badges)](https://www.npmjs.com/package/@ludum-dare-badges/react) [![img](https://img.shields.io/npm/v/@ludum-dare-badges/react.svg?color=success&label=npm%20package)](https://www.npmjs.com/package/@ludum-dare-badges/react) [![img](https://img.shields.io/npm/dt/@ludum-dare-badges/react.svg)](https://www.npmjs.com/package/@ludum-dare-badges/react) [![img](https://img.shields.io/npm/l/@ludum-dare-badges/react.svg)](https://github.com/woofers/ludum-dare-badges/blob/master/License.txt)
 
 
 # @ludum-dare-badges/react
@@ -59,6 +59,6 @@ Can be either `svg` or `png`.
 
 ### Type
 
-The host of the API. **Default:** `https://badges.jaxs.onl/`
+The host of the API. **Default:** `https://badges.jaxs.onl`
 
 Likely only set in the case that the API is self-hosted.
