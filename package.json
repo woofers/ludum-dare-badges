@@ -1,6 +1,6 @@
 {
   "name": "ludum-dare-badges",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "SVG & PNG badges for Ludum Dare Game Jam results",
   "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",
   "dependencies": {
@@ -46,7 +46,7 @@
   "bugs": {
     "url": "https://github.com/woofers/ludum-dare-badges/issues"
   },
-  "homepage": "https://github.com/woofers/ludum-dare-badges/tree/master",
+  "homepage": "https://github.com/woofers/ludum-dare-badges/tree/main",
   "devDependencies": {
     "rimraf": "^3.0.0",
     "vercel": "^20.1.0"

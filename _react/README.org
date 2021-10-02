@@ -10,7 +10,7 @@
 
 Display Ludum Dare Game Jam results in React.
 
-*[[https://badges.vandoorn.ca][Live Demo]]*
+*[[https://badges.jaxs.onl][Live Demo]]*
 
 *Note:* This project is community made and not endorsed by the offical Ludum Dare creator(s).
 
@@ -39,7 +39,7 @@ const App = () => (
 
 Simply add the game widget to the React application using JSX.
 
-The React component will simply call **[[https://github.com/woofers/ludum-dare-badges/tree/master][@ludum-dare-badges/api]]**
+The React component will simply call **[[https://github.com/woofers/ludum-dare-badges/tree/main][@ludum-dare-badges/api]]**
 to obtain the results badge.
 
 ** Props
@@ -56,6 +56,6 @@ Can be either ~svg~ or ~png~.
 ~svg~ is recommended for better font rendering.
 
 *** Type
-The host of the API. *Default:* ~https://badges.vandoorn.ca~
+The host of the API. *Default:* ~https://badges.jaxs.onl/~
 
 Likely only set in the case that the API is self-hosted.

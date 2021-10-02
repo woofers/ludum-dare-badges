@@ -20,13 +20,13 @@ API used to dynamically generate SVG and PNG Ludum Dare results badges in real-t
 
 #+CAPTION: SVG Badge
 #+NAME:    SVG Badge
-https://badges.vandoorn.ca/44/alien-e-x-p-a-n-s-i-o-n/badge.svg
+https://badges.jaxs.onl/44/alien-e-x-p-a-n-s-i-o-n/badge.svg
 
 *PNG Badge:*
 
 #+CAPTION: PNG Badge
 #+NAME:    PNG Badge
-https://badges.vandoorn.ca/44/alien-e-x-p-a-n-s-i-o-n/badge.png
+https://badges.jaxs.onl/44/alien-e-x-p-a-n-s-i-o-n/badge.png
 
 * Usage
 Simply form the API query using your game's Ludum Dare entry page path.
@@ -50,16 +50,15 @@ You can also think of it as adding ~/badge.svg~ to the existing Ludum Dare path:
 This path can be appended to the domain of ~badges.vandoorn.ca~ to form the image URL:
 
 #+BEGIN_SRC
-badges.vandoorn.ca/44/alien-e-x-p-a-n-s-i-o-n/badge.svg
+badges.jaxs.onl/44/alien-e-x-p-a-n-s-i-o-n/badge.svg
 #+END_SRC
 
 Or more generalized:
 
 #+BEGIN_SRC
-badges.vandoorn.ca/:id/:game/badge.<type>
+badges.jaxs.onl/:id/:game/badge.<type>
 #+END_SRC
 
-~badges.vandoorn.ca~ may also be used as the domain.
 ** Self Hosting
 
 Self hosting can done easily though [[https://vercel.com/home][Vercel]]'s serverless platform.
@@ -67,7 +66,7 @@ Self hosting can done easily though [[https://vercel.com/home][Vercel]]'s server
 #+CAPTION: Deploy with Vercel
 https://vercel.com/button
 
-Simply install the [[https://github.com/vercel/vercel/tree/master/packages/now-cli][Vercel CLI]] with:
+Simply install the [[https://vercel.com/cli][Vercel CLI]] with:
 
 *Yarn*
 #+BEGIN_SRC

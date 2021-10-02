@@ -1,10 +1,11 @@
-# @ludum-dare-badges/react
-
 [![img](https://github.com/woofers/ludum-dare-badges/workflows/build/badge.svg)](https://github.com/woofers/ludum-dare-badges/actions) [![img](https://david-dm.org/woofers/@ludum-dare-badges/react.svg)](https://www.npmjs.com/package/@ludum-dare-badges/react) [![img](https://img.shields.io/npm/v/@ludum-dare-badges/react.svg?color=success&label=npm%20package)](https://www.npmjs.com/package/@ludum-dare-badges/react) [![img](https://img.shields.io/npm/dt/@ludum-dare-badges/react.svg)](https://www.npmjs.com/package/@ludum-dare-badges/react) [![img](https://img.shields.io/npm/l/@ludum-dare-badges/react.svg)](https://github.com/woofers/ludum-dare-badges/blob/master/License.txt)
+
+
+# @ludum-dare-badges/react
 
 Display Ludum Dare Game Jam results in React.
 
-**[Live Demo](https://badges.vandoorn.ca)**
+**[Live Demo](https://badges.jaxs.onl)**
 
 **Note:** This project is community made and not endorsed by the offical Ludum Dare creator(s).
 
@@ -33,7 +34,7 @@ const App = () => (
 
 Simply add the game widget to the React application using JSX.
 
-The React component will simply call ****[@ludum-dare-badges/api](https://github.com/woofers/ludum-dare-badges/tree/master)****
+The React component will simply call ****[@ludum-dare-badges/api](https://github.com/woofers/ludum-dare-badges/tree/main)****
 to obtain the results badge.
 
 
@@ -58,6 +59,6 @@ Can be either `svg` or `png`.
 
 ### Type
 
-The host of the API. **Default:** `https://badges.vandoorn.ca`
+The host of the API. **Default:** `https://badges.jaxs.onl/`
 
 Likely only set in the case that the API is self-hosted.

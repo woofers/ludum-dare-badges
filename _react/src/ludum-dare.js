@@ -7,7 +7,7 @@ const LudumDare = ({ host, game, type, ...rest }) => {
 }
 
 LudumDare.defaultProps = {
-  host: 'https://badges.vandoorn.ca',
+  host: 'https://badges.jaxs.onl',
   type: 'svg'
 }
 
