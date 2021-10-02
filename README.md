@@ -6,7 +6,7 @@
 
 API used to dynamically generate SVG and PNG Ludum Dare results badges in real-time.
 
-**[Live Demo](https://badges.vandoorn.ca)**
+**[Live Demo](https://badges.jaxs.onl)**
 
 **Note:** This project is community made and not endorsed by the offical Ludum Dare creator(s).
 
