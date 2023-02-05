@@ -1,7 +1,7 @@
 import Container from 'components/container'
 import Options from '../components/options'
 
-const Home: React.FC<{}> = () => {
+const Home: React.FC<Nothing> = () => {
   return (
     <main>
       <Container>
