@@ -12,6 +12,10 @@
   margin: 0;
 }
 
+html {
+  color-scheme: dark;
+}
+
 html,
 body {
   height: 100%;
@@ -58,8 +62,7 @@ input:focus + .input-box-container > .input-box-label,
 input:not(:placeholder-shown) + .input-box-container > .input-box-label-placeholder,
 input:focus + .input-box-container > .input-box-label-placeholder {
   transform: translate(-0.75rem, calc(-0.625rem - 24px - 8px));
-  opacity: 1;
-  color: rgb(107 114 128);
+  opacity: 0.5;
 }
 
 

@@ -16,9 +16,9 @@ type Values = {
 }
 
 const dropdownClass = ['px-3', 'py-2.5', 'rounded-lg',
-    'bg-zinc-100',
+    'bg-zinc-800',
     'border-solid',
-    'border-stone-200',
+    'border-stone-700',
     'border', 'w-16'].join(" ")
 
 const TypeDropdown: React.FC<{ name: string }> = ({ name }) => {
@@ -60,8 +60,9 @@ const Options: React.FC<{}> = () => {
       setMounted(true)
     }, [])
     const url = () => {
-      if (!mounted || typeof window === 'undefined') return ''
-      if (!window.location.host) return ''
+      const defaultValue = 'badges.jaxs.onl'
+      if (!mounted || typeof window === 'undefined') return defaultValue
+      if (!window.location.host) return defaultValue
       return `${window.location.protocol}//${window.location.host}`
     }
     const shortUrl = () => {

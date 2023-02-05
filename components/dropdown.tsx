@@ -16,7 +16,7 @@ import { clsx } from 'cva'
 export const DropdownSeparator: React.FC<
   React.ComponentProps<typeof Separator>
 > = ({ className, ...rest }) => (
-  <Separator {...rest} className={clsx('h-px bg-zinc-200 my-1', className)} />
+  <Separator {...rest} className={clsx('h-px bg-zinc-700 my-1', className)} />
 )
 
 export const DropdownItem: React.FC<React.ComponentProps<typeof Item>> = ({
@@ -26,7 +26,7 @@ export const DropdownItem: React.FC<React.ComponentProps<typeof Item>> = ({
   <Item
     {...rest}
     className={clsx(
-      'flex gap-x-1.5 px-4 py-2 text-stone-700 cursor-pointer data-[highlighted]:outline-0 data-[highlighted]:bg-stone-200/75 border-transparent focus:outline-none',
+      'flex gap-x-1.5 px-4 py-2 text-stone-200 cursor-pointer data-[highlighted]:outline-0 data-[highlighted]:bg-zinc-700 border-transparent focus:outline-none',
       className
     )}
   />
@@ -55,12 +55,12 @@ export const Dropdown: React.FC<
           align="end"
           arrowPadding={12}
           className={clsx(
-            'pt-4 pb-2 bg-zinc-100 rounded-xl w-28 drop-shadow',
+            'pt-4 pb-2 bg-zinc-800 rounded-xl w-28 drop-shadow',
             className
           )}
         >
           {children}
-          <Arrow className="fill-zinc-100" width={15} height={7.5} />
+          <Arrow className="fill-zinc-800" width={15} height={7.5} />
         </Content>
       </Portal>
     </Root>

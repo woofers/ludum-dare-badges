@@ -6,7 +6,7 @@ const RootLayout: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
       <head />
       <body>
         <div id="__next">
-          <div className="flex min-h-screen flex-col text-stone-900 bg-background">
+          <div className="flex min-h-screen flex-col text-stone-100 bg-zinc-900">
             {children}
           </div>
         </div>

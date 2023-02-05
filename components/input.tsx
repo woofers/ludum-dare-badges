@@ -11,16 +11,16 @@ const input = cva(['w-full', 'placeholder:opacity-0'], {
     },
     theme: {
       primary: [
-        'bg-zinc-100',
+        'bg-zinc-800',
         'border-solid',
-        'border-stone-200',
+        'border-stone-700',
         'border',
         'transition-colors',
         'placeholder:transition-colors',
-        'placeholder:text-zinc-400',
-        'hover:placeholder:text-zinc-500'
+        'placeholder:text-zinc-500',
+        'hover:placeholder:text-zinc-400'
       ],
-      ghost: []
+      ghost: ['bg-transparent']
     }
   },
   defaultVariants: {
