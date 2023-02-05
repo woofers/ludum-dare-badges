@@ -23,6 +23,7 @@
   "devDependencies": {
     "@types/html-minifier": "^4.0.2",
     "@types/sanitize-html": "^2.8.0",
+    "autoprefixer": "^10.4.13",
     "canvas": "^2.11.0",
     "html-minifier": "^4.0.0",
     "postcss": "^8.4.21",

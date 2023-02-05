@@ -93,7 +93,7 @@ const type = async (data: string, rasterize: boolean) => {
   }
 }
 
-export default (id: string, game: string, res: NextApiResponse, rasterize: boolean) => {
+const makeImage = (id: string, game: string, res: NextApiResponse, rasterize: boolean) => {
   svgData(id, game)
     .catch(err => Promise.resolve(results(err.title, '', err.message)))
     .then(it => template(it, rasterize))
@@ -107,4 +107,5 @@ export default (id: string, game: string, res: NextApiResponse, rasterize: boole
     .catch(err => res.send(err))
 }
 
+export default makeImage
 export { default as registerFonts } from './fonts'

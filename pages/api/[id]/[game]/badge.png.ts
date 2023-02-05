@@ -1,10 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import fetchImage, { registerFonts } from '../../_lib/api'
+import fetchImage, { registerFonts } from '../../../../lib/api'
+import { getSingle } from '../../../../lib/util/path'
 
 registerFonts()
 
 const handler = (req: NextApiRequest, res: NextApiResponse) => {
-  const { id, game } = req.query
+  const id = getSingle(req.query.id)
+  const game = getSingle(req.query.game)
   fetchImage(id, game, res, true)
 }
 
