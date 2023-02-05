@@ -27,7 +27,7 @@
     "canvas": "^2.11.0",
     "html-minifier": "^4.0.0",
     "postcss": "^8.4.21",
-    "sanitize-html": "v1",
+    "sanitize-html": "^2.9.0",
     "svg2img": "0.8.1",
     "tailwindcss": "^3.2.4"
   }

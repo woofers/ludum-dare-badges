@@ -93,19 +93,24 @@ const type = async (data: string, rasterize: boolean) => {
   }
 }
 
+export const setHeaders = (img: { type: string; data: unknown }, res: NextApiResponse) => {
+  const maxAge = 4 * 60 * 60 * 1000
+  res.setHeader('Cache-Control', `public, immutable, no-transform, s-maxage=${maxAge}, max-age=${maxAge}`)
+  res.setHeader('Content-Type', img.type)
+  res.send(img.data)
+}
+
 const makeImage = (id: string, game: string, res: NextApiResponse, rasterize: boolean) => {
   svgData(id, game)
     .catch(err => Promise.resolve(results(err.title, '', err.message)))
     .then(it => template(it, rasterize))
     .then(data => type(data, rasterize))
     .then(img => {
-      const maxAge = 4 * 60 * 60 * 1000
-      res.setHeader('Cache-Control', `public, immutable, no-transform, s-maxage=${maxAge}, max-age=${maxAge}`)
-      res.setHeader('Content-Type', img.type)
-      res.send(img.data)
+      setHeaders(img, res)
     })
     .catch(err => res.send(err))
 }
+
 
 export default makeImage
 export { default as registerFonts } from './fonts'
