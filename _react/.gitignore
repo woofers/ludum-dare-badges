@@ -21,4 +21,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-lib
+lib/ludum-dare-badges.dev.js
+lib/ludum-dare-badges.js
+lib/ludum-dare-badges.module.js
+lib/ludum-dare-badges.module.dev.js

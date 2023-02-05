@@ -1,54 +1,39 @@
 {
   "name": "ludum-dare-badges",
-  "version": "2.0.0",
-  "description": "SVG & PNG badges for Ludum Dare Game Jam results",
-  "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",
-  "dependencies": {
-    "@emotion/core": "^10.0.22",
-    "@ludum-dare-badges/react": "./_react",
-    "@material-ui/core": "^4.5.1",
-    "axios": "^0.20.0",
-    "emotion-server": "^10.0.17",
-    "emotion-theming": "^10.0.19",
-    "gatsby": "^2.17.4",
-    "gatsby-plugin-emotion": "^4.1.12",
-    "gatsby-plugin-manifest": "^2.2.23",
-    "gatsby-plugin-material-ui": "^2.1.6",
-    "gatsby-plugin-react-helmet": "^3.1.13",
-    "gatsby-plugin-typography": "^2.3.14",
-    "html-minifier": "^4.0.0",
-    "react": "^16.9.0",
-    "react-copy-to-clipboard": "^5.0.1",
-    "react-dom": "^16.11.0",
-    "react-emotion": "^10.0.0",
-    "react-helmet": "^6.1.0",
-    "react-typography": "^0.16.19",
-    "sanitize-html": "^1.27.4",
-    "svg2img": "^0.8.1",
-    "typography": "^0.16.19",
-    "typography-plugin-code": "^0.16.19",
-    "typography-theme-lawton": "^0.16.19"
-  },
-  "license": "MIT",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "watch": "NODE_ENV=development vercel dev",
-    "start": "NODE_ENV=development vercel dev",
-    "preinstall": "yarn --cwd _react install && yarn --cwd _react build",
-    "build": "gatsby build",
-    "now-build": "yum install libuuid-devel libmount-devel && cp /lib64/{libuuid,libmount,libblkid}.so.1 node_modules/canvas/build/Release/ && yarn run build",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "clean": "rimraf public && yarn --cwd _react clean"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/woofers/ludum-dare-badges.git"
+  "dependencies": {
+    "@ludum-dare-badges/react": "^2.1.2",
+    "@next/font": "13.1.6",
+    "@radix-ui/react-dropdown-menu": "^2.0.2",
+    "@types/node": "18.11.19",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "class-variance-authority": "^0.4.0",
+    "clsx": "^1.2.1",
+    "eslint": "8.33.0",
+    "eslint-config-next": "13.1.6",
+    "formik": "^2.2.9",
+    "next": "13.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "4.9.5"
   },
-  "bugs": {
-    "url": "https://github.com/woofers/ludum-dare-badges/issues"
-  },
-  "homepage": "https://github.com/woofers/ludum-dare-badges/tree/main",
   "devDependencies": {
-    "rimraf": "^3.0.0",
-    "vercel": "^20.1.0"
+    "@types/html-minifier": "^4.0.2",
+    "@types/sanitize-html": "^2.8.0",
+    "autoprefixer": "^10.4.13",
+    "canvas": "^2.11.0",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.4.21",
+    "sanitize-html": "^2.9.0",
+    "svg2img": "0.8.1",
+    "tailwindcss": "^3.2.4"
   }
 }
