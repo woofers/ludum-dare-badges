@@ -4,7 +4,11 @@ const nextConfig = {
     appDir: true,
   },
   async rewrites() {
-    return [{ source: "/:path*", destination: "/api/:path*" }];
+    return {
+      fallback: [
+        { source: "/:path(.+)", destination: "/api/:path*" },
+      ]
+    };
   },
 }
 

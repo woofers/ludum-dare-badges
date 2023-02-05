@@ -12,7 +12,7 @@ type Values = {
   sep: string
   name: string
   badge: string
-  type: string
+  type: 'svg' | 'png'
 }
 
 const dropdownClass = ['px-3', 'py-2.5', 'rounded-lg',
@@ -41,7 +41,7 @@ const TypeDropdown: React.FC<{ name: string }> = ({ name }) => {
   )
 }
 
-const Image: React.FC<{ url: string }> = ({ url }) => {
+const Badge: React.FC<{ url: string }> = ({ url }) => {
   const { values } = useFormikContext<Values>();
   const name = values.name
   const id = values.id
@@ -85,7 +85,7 @@ const Options: React.FC<{}> = () => {
                   <Input name="badge" width="90px" disabled theme="ghost" label="/badge." />
                   <TypeDropdown name="type" />
               </Form>
-              <Image url={url()} />
+              <Badge url={url()} />
             </div>
           </Formik>
         </>
