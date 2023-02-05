@@ -1,9 +1,9 @@
 {
   "name": "@ludum-dare-badges/react",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "React bindings for ludum-dare-badges",
   "src": "src/ludum-dare.tsx",
-  "main": "lib/index.tsx",
+  "main": "lib/index.js",
   "module": "lib/index.module.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -17,7 +17,7 @@
     "build:umd": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=false -i src/index.tsx -o lib/ludum-dare-badges.js -f umd",
     "build:dev:module": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=true -i src/index.tsx -o lib/ludum-dare-badges.module.dev.js -f es",
     "build:dev:umd": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=true -i src/index.tsx -o lib/ludum-dare-badges.dev.js -f umd",
-    "build": "yarn build:dev:module && yarn build:dev:umd && yarn build:module && yarn build:umd",
+    "build": "yarn clean && yarn build:dev:module && yarn build:dev:umd && yarn build:module && yarn build:umd",
     "clean": "rimraf lib/ludum-dare-badges.dev.js lib/ludum-dare-badges.js lib/ludum-dare-badges.module.dev.js lib/ludum-dare-badges.module.js lib/index.d.ts",
     "test": "echo \"No tests \""
   },
