@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@ludum-dare-badges/react": "^2.1.0",
+    "@ludum-dare-badges/react": "^2.1.1",
     "@next/font": "13.1.6",
     "@radix-ui/react-dropdown-menu": "^2.0.2",
     "@types/node": "18.11.19",

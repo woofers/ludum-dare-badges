@@ -1,6 +1,6 @@
 {
   "name": "@ludum-dare-badges/react",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "React bindings for ludum-dare-badges",
   "src": "src/ludum-dare.tsx",
   "main": "lib/index.js",

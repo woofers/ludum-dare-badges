@@ -63,10 +63,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@ludum-dare-badges/react@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@ludum-dare-badges/react/-/react-2.1.0.tgz#1e4f0f73920baa0cda4fe8f2dadbfdd44850ea98"
-  integrity sha512-t3/89yTDISgGWVynByXSGR677sbwCRRIbmvGNn3CXxAjBi0gX49wL8ktG9d7acUwOeXGdk+fPCynIcW8VgwYmg==
+"@ludum-dare-badges/react@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@ludum-dare-badges/react/-/react-2.1.1.tgz#662c0890efbdc5310b84b359e77c4b40de100713"
+  integrity sha512-8Dia+UVQ6JsHOY2377gun05+NjQkpfcDR7tyDCcKIvWapW8LOPZIE7UzgDSBxYDTyKnUPjj5ECT6Gr0rQ0TIfg==
 
 "@mapbox/node-pre-gyp@^1.0.0":
   version "1.0.10"
