@@ -1,4 +1,5 @@
 import { clsx, cva } from 'cva'
+import { useField } from 'formik'
 import React, { useId } from 'react'
 import type { VariantProps } from 'cva'
 
@@ -35,9 +36,12 @@ type DataProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'>
 type InputProps = DataProps & InputVaraints & { 
   label?: React.ReactNode
   width?: string
+  name: string
 }
 
 const Input: React.FC<InputProps> = ({
+  id: initialId,
+  name,
   className,
   type = 'text',
   size = 'normal',
@@ -47,12 +51,15 @@ const Input: React.FC<InputProps> = ({
   label,
   ...rest
 }) => {
-  const id = useId()
+  const generatedId = useId()
+  const id = initialId || generatedId
+  const [field] = useField(name)
   return (
     <div className="relative inline-block input-box mt-8" style={{ width }}>
       <input
         id={id}
         {...rest}
+        {...field}
         type={type}
         className={clsx(input({ size, theme }), className)}
         placeholder={placeholder || " "}
