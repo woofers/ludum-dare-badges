@@ -54,8 +54,8 @@ const Badge: React.FC<{ url: string }> = ({ url }) => {
 }
 
 const getHost = () => {
-  if (process.env.VERCEL_URL) {
-    return process.env.VERCEL_URL
+  if (process.env.NEXT_PUBLIC_ROOT_URL) {
+    return process.env.NEXT_PUBLIC_ROOT_URL
   } else if (typeof window !== 'undefined') {
     return window.location.host
   }
