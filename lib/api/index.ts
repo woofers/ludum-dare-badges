@@ -113,4 +113,3 @@ const makeImage = (id: string, game: string, res: NextApiResponse, rasterize: bo
 
 
 export default makeImage
-export { default as registerFonts } from './fonts'
