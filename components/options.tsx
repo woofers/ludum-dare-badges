@@ -1,7 +1,6 @@
 'use client'
 
 import { Form, Formik, useField, useFormikContext } from 'formik'
-import { useState, useEffect } from 'react'
 import Input from './input'
 import { Dropdown, DropdownItem } from './dropdown'
 import Widget from '@ludum-dare-badges/react'
@@ -54,38 +53,40 @@ const Badge: React.FC<{ url: string }> = ({ url }) => {
   )
 }
 
+const getHost = () => {
+  if (process.env.VERCEL_URL) {
+    return process.env.VERCEL_URL
+  } else if (typeof window !== 'undefined') {
+    return window.location.host
+  }
+  return 'localhost:3000'
+}
+
+const getAbsoluteUrl = () => {
+  const host = getHost()
+  if (host.startsWith('localhost')) {
+    return `http://${host}`
+  }
+  return `https://${host}`
+}
+
+const onSubmit = async (values: Values) => {
+}
+
 const Options: React.FC<{}> = () => {
-    const [mounted, setMounted] = useState(false)
-    useEffect(() => {
-      setMounted(true)
-    }, [])
-    const url = () => {
-      const defaultValue = 'badges.jaxs.onl'
-      if (!mounted || typeof window === 'undefined') return defaultValue
-      if (!window.location.host) return defaultValue
-      return `${window.location.protocol}//${window.location.host}`
-    }
-    const shortUrl = () => {
-      return url()
-        .replace('https://', '')
-        .replace('http://', '')
-        .substring(0, 18)
-    }
-    const onSubmit = async (values: Values) => {
-    }
     return (
         <>
           <Formik initialValues={{ host: '', id: '', sep: '', name: '', badge: '', type: 'svg' }} onSubmit={onSubmit}>
             <div>
               <Form>
-                  <Input name="host" width="200px" disabled theme="ghost" label={`${shortUrl()}/`} />
+                  <Input name="host" width="200px" disabled theme="ghost" label={`${getAbsoluteUrl().substring(0, 18)}/`} />
                   <Input name="id" width="145px" label="Ludum Dare #" placeholder="44" type="number" min={0} max={200} />
                   <Input name="sep" width="35px" disabled theme="ghost" label="/" />
                   <Input name="name" width="205px" label="Game" placeholder="alien-e-x-p-a-n-s-i-o-n" />
                   <Input name="badge" width="90px" disabled theme="ghost" label="/badge." />
                   <TypeDropdown name="type" />
               </Form>
-              <Badge url={url()} />
+              <Badge url={getAbsoluteUrl()} />
             </div>
           </Formik>
         </>
