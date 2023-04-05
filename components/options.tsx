@@ -48,7 +48,7 @@ const Badge: React.FC<{ url: string }> = ({ url }) => {
   const game = id && name ? `${id}/${name}`: ''
   return (
     <div className="mt-8 flex justify-center">
-      {url ? <Widget host={url} game={game} type={type} /> : null}
+      {url ? <Widget host={url} game={game} type={type} {...({ width: 454, height: 363} as any)} /> : null}
     </div>
   )
 }
@@ -93,7 +93,7 @@ const Options: React.FC<{}> = () => {
                   <Input name="badge" width="90px" disabled theme="ghost" label="/badge." />
                   <TypeDropdown name="type" />
               </Form>
-              <Badge url={getAbsoluteUrl()} {...({ width: 454, height: 363} as any)}/>
+              <Badge url={getAbsoluteUrl()} />
             </div>
           </Formik>
         </>
