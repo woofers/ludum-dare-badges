@@ -8,7 +8,7 @@ const Home: React.FC<Nothing> = () => {
         <div className="flex flex-col items-center">
           <div className="flex flex-col items-center gap-y-3 my-4">
             <h1 className="text-3xl font-semibold">Ludum Dare Badges</h1>
-            <h4 className="text-lg text-zinc-500">SVG badges for Ludum Dare Game Jam results</h4>
+            <h2 className="text-lg text-zinc-500">SVG badges for Ludum Dare Game Jam results</h2>
           </div>
           <Options />
         </div>

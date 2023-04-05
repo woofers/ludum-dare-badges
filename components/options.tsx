@@ -93,7 +93,7 @@ const Options: React.FC<{}> = () => {
                   <Input name="badge" width="90px" disabled theme="ghost" label="/badge." />
                   <TypeDropdown name="type" />
               </Form>
-              <Badge url={getAbsoluteUrl()} />
+              <Badge url={getAbsoluteUrl()} {...({ width: 454, height: 363} as any)}/>
             </div>
           </Formik>
         </>
