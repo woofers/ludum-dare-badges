@@ -70,6 +70,13 @@ const getAbsoluteUrl = () => {
   return `https://${host}`
 }
 
+const getShortUrl = () => {
+  return getAbsoluteUrl()
+    .replace('https://', '')
+    .replace('http://', '')
+    .substring(0, 18)
+}
+
 const onSubmit = async (values: Values) => {
 }
 
@@ -79,7 +86,7 @@ const Options: React.FC<{}> = () => {
           <Formik initialValues={{ host: '', id: '', sep: '', name: '', badge: '', type: 'svg' }} onSubmit={onSubmit}>
             <div>
               <Form>
-                  <Input name="host" width="200px" disabled theme="ghost" label={`${getAbsoluteUrl().substring(0, 18)}/`} />
+                  <Input name="host" width="200px" disabled theme="ghost" label={`${getShortUrl()}/`} />
                   <Input name="id" width="145px" label="Ludum Dare #" placeholder="44" type="number" min={0} max={200} />
                   <Input name="sep" width="35px" disabled theme="ghost" label="/" />
                   <Input name="name" width="205px" label="Game" placeholder="alien-e-x-p-a-n-s-i-o-n" />
