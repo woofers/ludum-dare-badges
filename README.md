@@ -64,15 +64,21 @@ Simply install the [Vercel CLI](https://vercel.com/cli) with:
 
 **Yarn**
 
-    yarn global add vercel
+```yarn
+yarn global add vercel
+```
 
 **npm**
 
-    npm install -g vercel
+```npm
+npm install -g vercel
+```
 
 and type `vercel` in the root of the monorepo.
 
 To form the API query follow the steps above with and replace the domain
 with the domain of your self hosted instance:
 
-    <example.com>/:id/:game/badge.<type>
+```
+<example.com>/:id/:game/badge.<type>
+```
