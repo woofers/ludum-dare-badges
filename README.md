@@ -44,13 +44,13 @@ You can also think of it as adding `/badge.svg` to the existing Ludum Dare path:
 
 This path can be appended to the domain of `badges.vandoorn.ca` to form the image URL:
 
-```
+```cmd
 badges.jaxs.onl/44/alien-e-x-p-a-n-s-i-o-n/badge.svg
 ```
 
 Or more generalized:
 
-```
+```cmd
 badges.jaxs.onl/:id/:game/badge.<type>
 ```
 
@@ -79,6 +79,6 @@ and type `vercel` in the root of the monorepo.
 To form the API query follow the steps above with and replace the domain
 with the domain of your self hosted instance:
 
-```
+```cmd
 <example.com>/:id/:game/badge.<type>
 ```
