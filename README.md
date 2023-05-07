@@ -44,12 +44,15 @@ You can also think of it as adding `/badge.svg` to the existing Ludum Dare path:
 
 This path can be appended to the domain of `badges.vandoorn.ca` to form the image URL:
 
-    badges.jaxs.onl/44/alien-e-x-p-a-n-s-i-o-n/badge.svg
+```
+badges.jaxs.onl/44/alien-e-x-p-a-n-s-i-o-n/badge.svg
+```
 
 Or more generalized:
 
-    badges.jaxs.onl/:id/:game/badge.<type>
-
+```
+badges.jaxs.onl/:id/:game/badge.<type>
+```
 
 ## Self Hosting
 
