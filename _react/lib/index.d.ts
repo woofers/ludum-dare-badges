@@ -5,4 +5,4 @@ type Props = {
     type?: 'svg' | 'png';
 };
 declare const LudumDare: React.FC<Props>;
-export default LudumDare;
+export = LudumDare;
