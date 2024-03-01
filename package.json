@@ -30,7 +30,7 @@
     "autoprefixer": "^10.4.16",
     "html-minifier": "^4.0.0",
     "postcss": "^8.4.32",
-    "sanitize-html": "^2.11.0",
+    "sanitize-html": "^2.12.1",
     "svg2img": "^1.0.0-beta.2",
     "tailwindcss": "^3.4.0"
   }
